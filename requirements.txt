@@ -1,0 +1,38 @@
+# Core ML libraries
+numpy
+pandas
+scikit-learn
+
+# Sentence embeddings
+sentence-transformers
+transformers
+torch
+huggingface-hub
+
+# Clustering and evaluation
+scipy
+
+# Data visualization
+matplotlib
+seaborn
+
+# Data handling
+opendatasets
+kaggle
+
+# Jupyter notebook support
+jupyter
+ipykernel
+notebook
+
+# Text processing
+nltk
+regex
+
+# Utilities
+tqdm
+pyyaml
+
+# Testing
+pytest
+pytest-cov
