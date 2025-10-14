@@ -1,8 +1,12 @@
 # Project-specific ignores
 data/
+
 # any .csv files in the data/ or output/ directories
 data/*.csv
 outputs/*.csv
+
+# Keep .gitkeep files
+!data/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

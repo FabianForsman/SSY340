@@ -7,6 +7,7 @@ import pandas as pd
 from pathlib import Path
 import torch
 from torch.utils.data import Dataset, DataLoader
+from sklearn.model_selection import train_test_split
 
 
 class HateSpeechDataset(Dataset):
@@ -78,7 +79,7 @@ class HateSpeechDataset(Dataset):
         return len(self._samples)
     
     def _collect_samples(self):
-        """Collect all text samples and labels
+        """Collect all text samples and labels.
         
         Helper method for the constructor
         
@@ -108,7 +109,7 @@ class HateSpeechDataset(Dataset):
         return self.df.describe()
     
     def get_sample_by_index(self, idx):
-        """Get sample by DataFrame index
+        """Get sample by DataFrame index.
         
         Convenience method for exploration.
         
@@ -187,27 +188,24 @@ class UnlabeledTweetDataset(Dataset):
         """Total number of samples"""
         return len(self._samples)
 
+def train_dev_test_split(values, train_size=0.7, dev_size=0.2, test_size=0.1):
+    # First split: separate test set (20%)
+    train_dev, test = train_test_split(values, test_size=test_size, random_state=42)
 
-def create_dataloader(dataset, batch_size=32, shuffle=True, num_workers=0, **kwargs):
-    """Create a PyTorch DataLoader from a dataset.
+    # Second split: separate train and dev sets from the remaining 80%
+    relative_dev_size = dev_size / (train_size + dev_size)  # Adjust dev size relative to the remaining data
+    train, dev = train_test_split(train_dev, test_size=relative_dev_size, random_state=42)
     
-    Args:
-        dataset (Dataset): PyTorch dataset
-        batch_size (int): Number of samples per batch
-        shuffle (bool): Whether to shuffle the data
-        num_workers (int): Number of subprocesses for data loading
-        **kwargs: Additional arguments to pass to DataLoader
-        
-    Returns:
-        DataLoader: PyTorch DataLoader
-    """
-    return DataLoader(
-        dataset,
-        batch_size=batch_size,
-        shuffle=shuffle,
-        num_workers=num_workers,
-        **kwargs
-    )
+    print(f"Train size: {len(train)}, Dev size: {len(dev)}, Test size: {len(test)}")
+    print(f"Percentages -> Train: {len(train)/len(values):.2f}, Dev: {len(dev)/len(values):.2f}, Test: {len(test)/len(values):.2f}")
+    return train, dev, test
+
+def create_dataloaders(dataset, batch_size=32, shuffle=True, num_workers=0, train_dev_test_split_sizes=(0.7, 0.2, 0.1)):
+    train, dev, test = train_dev_test_split(dataset, *train_dev_test_split_sizes)
+    train_loader = DataLoader(train, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers)
+    dev_loader = DataLoader(dev, batch_size=batch_size, shuffle=False, num_workers=num_workers)
+    test_loader = DataLoader(test, batch_size=batch_size, shuffle=False, num_workers=num_workers)
+    return train_loader, dev_loader, test_loader
 
 
 if __name__ == "__main__":
@@ -216,7 +214,7 @@ if __name__ == "__main__":
     dataset.get_dataset_info()
     
     # Create a DataLoader
-    dataloader = create_dataloader(dataset, batch_size=32, shuffle=True)
+    dataloader = create_dataloaders(dataset, batch_size=32, shuffle=True)
     
     # Test iteration
     print("\n=== Testing DataLoader ===")

@@ -16,7 +16,7 @@ import torch
 # Add src to path
 sys.path.append(str(Path(__file__).parent))
 
-from data_loader import HateSpeechDataset, create_dataloader
+from data_loader import HateSpeechDataset, create_dataloaders
 from preprocessing import create_transform
 from embeddings import EmbeddingGenerator
 from visualization import visualize_class_dist
@@ -198,158 +198,42 @@ def balance_dataset(dataset):
 
     return dataset
 
-def save_processed_data(config, dataset, dataset_raw):
+def save_processed_data(dataloaders, csv_names, config):
     """
-    Save processed data to CSV files.
+    Save processed dataset splits to CSV files.
     
     Args:
+        dataloaders (tuple): Tuple of (train_loader, dev_loader, test_loader)
+        csv_names (tuple): Tuple of (train_csv, dev_csv, test_csv)
         config (dict): Configuration dictionary
-        dataset (HateSpeechDataset): Preprocessed dataset
-        dataset_raw (HateSpeechDataset): Raw dataset
     """
-    if not config.get("save_processed_data", True):
-        return
-        
-    print("\nSaving processed data...")
-    processed_data = []
-    
-    # Use DataLoader for efficient batch processing
-    save_dataloader = create_dataloader(
-        dataset, 
-        batch_size=config["embedding"]["batch_size"],
-        shuffle=False,
-        num_workers=4
-    )
-    
-    for texts, labels in tqdm(save_dataloader, desc="Processing batches for saving"):
-        for text, label in zip(texts, labels):
-            processed_data.append({
-                'cleaned_text': text,
-                'label': label.item() if torch.is_tensor(label) else label
-            })
-    
-    df_processed = pd.DataFrame(processed_data)
-    processed_path = Path(config["paths"]["processed_data_dir"]) / "processed_data.csv"
-    processed_path.parent.mkdir(parents=True, exist_ok=True)
-    df_processed.to_csv(processed_path, index=False)
-    print(f"Saved processed data to {processed_path}")
-    
-    # Also save with original data
-    df_full = dataset_raw.df.copy()
-    df_full['cleaned_text'] = df_processed['cleaned_text']
-    df_full_path = Path(config["paths"]["processed_data_dir"]) / "full_processed_data.csv"
-    df_full.to_csv(df_full_path, index=False)
-    print(f"Saved full processed data (with original columns) to {df_full_path}")
 
-
-def generate_embeddings(config, dataset):
-    """
-    Generate embeddings for the dataset.
-    
-    Args:
-        config (dict): Configuration dictionary
-        dataset (HateSpeechDataset): Preprocessed dataset
-        
-    Returns:
-        tuple: (embeddings, all_texts, all_labels, generator, embeddings_path)
-    """
     print("\n" + "=" * 70)
-    print("STEP 3: GENERATING EMBEDDINGS")
+    print("STEP 5: SAVING PROCESSED DATA TO CSV FILES")
     print("=" * 70)
 
-    embedding_model = config["embedding"]["model"]
-    print(f"Using embedding model: {embedding_model}")
+    train_loader, dev_loader, test_loader = dataloaders
+    train_csv, dev_csv, test_csv = csv_names
+    
+    def save_split(loader, filepath):
+        texts = []
+        labels = []
+        for batch in loader:
+            batch_texts, batch_labels = batch
+            texts.extend(batch_texts)
+            labels.extend([label.item() if torch.is_tensor(label) else label for label in batch_labels])
+        df = pd.DataFrame({
+            config["data"]["text_column"]: texts,
+            config["data"]["label_column"]: labels
+        })
+        df.to_csv(filepath, index=False)
+        print(f"Saved {len(df)} samples to {filepath}")
+    
+    save_split(train_loader, Path(config["paths"]["loaders_csvs"]) / train_csv)
+    save_split(dev_loader, Path(config["paths"]["loaders_csvs"]) / dev_csv)
+    save_split(test_loader, Path(config["paths"]["loaders_csvs"]) / test_csv)
 
-    generator = EmbeddingGenerator(embedding_model)
-    
-    # Extract all cleaned texts from dataset using DataLoader
-    print(f"Extracting texts from dataset...")
-    all_texts = []
-    all_labels = []
-    
-    # Create DataLoader for efficient batch processing
-    embedding_dataloader = create_dataloader(
-        dataset,
-        batch_size=config["embedding"]["batch_size"],
-        shuffle=False,  # Keep original order
-        num_workers=4
-    )
-    
-    for texts, labels in tqdm(embedding_dataloader, desc="Extracting samples"):
-        all_texts.extend(texts)
-        all_labels.extend([label.item() if torch.is_tensor(label) else label for label in labels])
-    
-    # Generate embeddings
-    print(f"Generating embeddings for {len(all_texts)} texts...")
-    embeddings = generator.encode(
-        all_texts,
-        batch_size=config["embedding"]["batch_size"],
-        normalize=config["embedding"]["normalize"],
-        show_progress=True,
-    )
-
-    # Save embeddings
-    embeddings_path = (
-        Path(config["paths"]["embeddings_dir"]) / f"embeddings_{embedding_model}.npy"
-    )
-    generator.save_embeddings(embeddings, embeddings_path)
-    
-    print(f"Generated embeddings shape: {embeddings.shape}")
-    
-    return embeddings, all_texts, all_labels, generator, embeddings_path
-
-
-def load_saved_embeddings(config, dataset=None):
-    """
-    Load previously saved embeddings from disk.
-    
-    Args:
-        config (dict): Configuration dictionary
-        dataset (HateSpeechDataset, optional): Preprocessed dataset to extract texts and labels.
-                                               If None, only embeddings will be loaded.
-        
-    Returns:
-        tuple: (embeddings, all_texts, all_labels, generator, embeddings_path)
-               If dataset is None, all_texts and all_labels will be empty lists.
-    """
-    print("\n" + "=" * 70)
-    print("STEP 3: LOADING SAVED EMBEDDINGS")
-    print("=" * 70)
-
-    embedding_model = config["embedding"]["model"]
-    embeddings_path = (
-        Path(config["paths"]["embeddings_dir"]) / f"embeddings_{embedding_model}.npy"
-    )
-    
-    if not embeddings_path.exists():
-        raise FileNotFoundError(
-            f"Embeddings file not found at {embeddings_path}. "
-            f"Please run generate_embeddings first."
-        )
-    
-    print(f"Loading embeddings from: {embeddings_path}")
-    generator = EmbeddingGenerator(embedding_model)
-    embeddings = generator.load_embeddings(embeddings_path)
-    print(f"Loaded embeddings shape: {embeddings.shape}")
-    
-    # Extract texts and labels if dataset is provided
-    all_texts = []
-    all_labels = []
-    
-    if dataset is not None:
-        print(f"Extracting texts and labels from dataset...")
-        embedding_dataloader = create_dataloader(
-            dataset,
-            batch_size=config["embedding"]["batch_size"],
-            shuffle=False,
-            num_workers=4
-        )
-        
-        for texts, labels in tqdm(embedding_dataloader, desc="Extracting samples"):
-            all_texts.extend(texts)
-            all_labels.extend([label.item() if torch.is_tensor(label) else label for label in labels])
-    
-    return embeddings, all_texts, all_labels, generator, embeddings_path
+    print(f"Processed data saved to {config['paths']['loaders_csvs']}")
 
 
 def calculate_similarities(embeddings, all_texts, all_labels, generator, embeddings_path, num_samples=3):
@@ -365,7 +249,7 @@ def calculate_similarities(embeddings, all_texts, all_labels, generator, embeddi
         num_samples (int): Number of samples to display similarities for
     """
     print("\n" + "=" * 70)
-    print(f"STEP 4: CALCULATING EMBEDDING SIMILARITIES (FIRST {num_samples} SAMPLES)")
+    print(f"CALCULATING EMBEDDING SIMILARITIES (FIRST {num_samples} SAMPLES)")
     print("=" * 70)
     
     embeddings = generator.load_embeddings(embeddings_path)
@@ -410,25 +294,26 @@ def run_pipeline(config):
 
     # Step 4: Balance the dataset
     dataset = balance_dataset(dataset)
+    
+    # Step 5: Create DataLoaders
+    # Shuffle before splitting
+    dataset.df = dataset.df.sample(frac=1, random_state=42).reset_index(drop=True)
 
-    # Visualize class distribution after augmentation
+    # Visualize class distribution after balancing
     visualize_class_dist(dataset)
 
-    # Step 5: Generate or Load Embeddings
-    # Uncomment ONE of the following options:
-    
-    # Option 1: Generate new embeddings
-    embeddings, all_texts, all_labels, generator, embeddings_path = generate_embeddings(config, dataset)
-    
-    # Option 2: Load previously saved embeddings
-    # embeddings, all_texts, all_labels, generator, embeddings_path = load_saved_embeddings(config, dataset)
+    # Create DataLoaders for train, dev, test splits
+    dataloaders = create_dataloaders(
+        dataset,
+        batch_size=config["embedding"]["batch_size"],
+        shuffle=True,
+        num_workers=4
+    )
 
-    # Step 6: Calculate the embedding similarities
-    calculate_similarities(embeddings, all_texts, all_labels, generator, embeddings_path)
-    
-    # Step 7: Save processed data
-    save_processed_data(config, dataset, dataset_raw)
-    return embeddings
+    # Step 8: Save processed data
+    save_processed_data(dataloaders, ("train.csv", "dev.csv", "test.csv"), config)
+
+    return None
 
 
 def main():

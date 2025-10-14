@@ -11,6 +11,7 @@ paths:
   models_dir: "models"
   results_dir: "outputs/results"
   figures_dir: "outputs/figures"
+  loaders_csvs: "data/loaders" # Directory to save train/dev/test CSVs
 
 # Data settings
 data:
