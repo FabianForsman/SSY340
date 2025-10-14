@@ -37,13 +37,13 @@ class TextTransform:
 
     def __init__(
         self,
-        remove_stopwords=False,
+        remove_stopwords=True,
         lowercase=True,
         remove_urls=True,
         remove_mentions=True,
-        remove_hashtags=False,
-        remove_numbers=False,
-        remove_quotes=False,
+        remove_hashtags=True,
+        remove_numbers=True,
+        remove_quotes=True,
     ):
         """
         Initialize TextTransform.
@@ -99,14 +99,15 @@ class TextTransform:
         if self.remove_mentions:
             text = re.sub(r"@\w+", "", text)
 
+        # Remove HTML entities and numbers (BEFORE removing hashtags to preserve &#...)
+        if self.remove_numbers:
+            text = re.sub(r"&#\d+;", "", text)
+            text = re.sub(r"&#\d+", "", text)
+            text = re.sub(r"\d+", "", text)
+
         # Remove hashtags (keep the word, remove #)
         if self.remove_hashtags:
             text = re.sub(r"#", "", text)
-
-        # Remove numbers
-        if self.remove_numbers:
-            text = re.sub(r"&#\d+;?", "", text)
-            text = re.sub(r"\d+", "", text)
 
         # Remove quotes
         if self.remove_quotes:
@@ -169,7 +170,7 @@ def get_text_stats(texts: Union[List[str], pd.Series]) -> dict:
 
 
 def create_transform(
-    remove_stopwords=False,
+    remove_stopwords=True,
     lowercase=True,
     remove_urls=True,
     remove_mentions=True,
