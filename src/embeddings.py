@@ -4,9 +4,8 @@ Generates sentence embeddings using various SBERT models.
 """
 
 import numpy as np
-import pandas as pd
 from sentence_transformers import SentenceTransformer
-from typing import List, Union, Optional
+from typing import List, Union
 import torch
 from pathlib import Path
 
@@ -71,7 +70,7 @@ class EmbeddingGenerator:
         normalize: bool = False,
     ) -> np.ndarray:
         """
-        Generate embeddings for texts.
+        Generate embeddings for texts. 
 
         Args:
             texts (str or List[str]): Text or list of texts to encode
@@ -99,28 +98,6 @@ class EmbeddingGenerator:
         print(f"Generated embeddings shape: {embeddings.shape}")
 
         return embeddings
-
-    def encode_dataframe(
-        self,
-        df: pd.DataFrame,
-        text_column: str,
-        batch_size: int = 32,
-        normalize: bool = False,
-    ) -> np.ndarray:
-        """
-        Generate embeddings for texts in a DataFrame column.
-
-        Args:
-            df (pd.DataFrame): Input DataFrame
-            text_column (str): Name of column containing texts
-            batch_size (int): Batch size for encoding
-            normalize (bool): Whether to normalize embeddings
-
-        Returns:
-            np.ndarray: Array of embeddings
-        """
-        texts = df[text_column].tolist()
-        return self.encode(texts, batch_size=batch_size, normalize=normalize)
 
     def save_embeddings(self, embeddings: np.ndarray, filepath: str):
         """
@@ -156,53 +133,11 @@ class EmbeddingGenerator:
     def get_embedding_dim(self) -> int:
         """Get the embedding dimension of the current model."""
         return self.model_info["dim"]
-
-
-def compare_models(
-    texts: List[str], models: Optional[List[str]] = None, sample_size: int = 100
-) -> dict:
-    """
-    Compare different embedding models on sample texts.
-
-    Args:
-        texts (List[str]): Texts to encode
-        models (List[str]): List of model names to compare (None for all)
-        sample_size (int): Number of texts to use for comparison
-
-    Returns:
-        dict: Comparison results
-    """
-    import time
-
-    if models is None:
-        models = list(EmbeddingGenerator.AVAILABLE_MODELS.keys())
-
-    # Sample texts
-    if len(texts) > sample_size:
-        texts = texts[:sample_size]
-
-    results = {}
-
-    for model_name in models:
-        print(f"\n=== Testing {model_name} ===")
-        generator = EmbeddingGenerator(model_name)
-
-        start_time = time.time()
-        embeddings = generator.encode(texts, show_progress=True)
-        elapsed_time = time.time() - start_time
-
-        results[model_name] = {
-            "embedding_dim": embeddings.shape[1],
-            "time_seconds": elapsed_time,
-            "time_per_text_ms": (elapsed_time / len(texts)) * 1000,
-            "embeddings": embeddings,
-        }
-
-        print(
-            f"Time: {elapsed_time:.2f}s ({results[model_name]['time_per_text_ms']:.2f}ms per text)"
-        )
-
-    return results
+    
+    def get_similarities(self, emb1: np.ndarray, emb2: np.ndarray) -> np.ndarray:
+        """Get the similarity scores of the current model."""
+        return self.model.similarity(emb1, emb2)
+        
 
 
 if __name__ == "__main__":

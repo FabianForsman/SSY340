@@ -19,49 +19,33 @@ data:
   kaggle_dataset: "mrmorj/hate-speech-and-offensive-language-dataset"
 
   # Path to data file (relative to raw_data_dir)
-  # Common names: 'labeled_data.csv', 'hate_speech.csv', 'data.csv'
-  data_file: null # Set to null to auto-detect
+  data_file: "labeled_data.csv" # Updated to correct filename
 
   # Column names in the dataset
   text_column: "tweet" # Column containing tweet text
-  label_column: "class" # Column containing labels (0=hate, 1=offensive, 2=neither)
+  label_column: "label" # Column containing labels (0=hate, 1=offensive, 2=neither)
 
 # Text preprocessing settings
 preprocessing:
-  remove_stopwords: false # Keep stopwords as they may be important for hate speech
+  remove_stopwords: false 
   lowercase: true
   remove_urls: true
   remove_mentions: true
-  remove_hashtags: false # Keep hashtag text but remove #
-  remove_numbers: false
+  remove_hashtags: true # Keep hashtag text but remove #
+  remove_numbers: true
+  remove_quotes: true # Remove quotation marks
 
 # Embedding generation settings
 embedding:
   # Model to use: 'all-MiniLM-L6-v2', 'paraphrase-MiniLM-L6-v2', 'all-mpnet-base-v2'
   model: "all-MiniLM-L6-v2"
-  batch_size: 32
+  batch_size: 64
   normalize: false # Whether to normalize embeddings to unit length
 
-# Clustering settings
-clustering:
-  # K-Means settings
-  use_kmeans: true
-  kmeans_n_clusters: 2 # Number of clusters (2 for hate vs non-hate)
-  find_optimal_k: true # Whether to run elbow method to find optimal k
-  max_k: 10 # Maximum k to test when finding optimal
-
-  # DBSCAN settings
-  use_dbscan: true
-  dbscan_eps: 0.5 # Maximum distance between two samples
-  dbscan_min_samples: 5 # Minimum samples in neighborhood
-
-# Evaluation settings
-evaluation:
-  # Metrics to compute
-  compute_ari: true # Adjusted Rand Index
-  compute_nmi: true # Normalized Mutual Information
-  compute_silhouette: true # Silhouette Score
-
-  # Visualization
-  plot_confusion_matrix: true
-  plot_clusters: false # Whether to plot t-SNE visualization (can be slow)
+# Data augmentation settings
+data_augmentation:
+  enabled: true
+  methods:
+    synonym_replacement:
+      enabled: true
+      n: 3 # Number of words to replace with synonyms

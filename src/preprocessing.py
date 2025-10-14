@@ -29,8 +29,11 @@ def download_nltk_data():
         nltk.download("wordnet")
 
 
-class TextPreprocessor:
-    """Class to handle text preprocessing operations."""
+class TextTransform:
+    """
+    Callable transform class for text preprocessing.
+    Can be used with PyTorch Dataset's transform parameter.
+    """
 
     def __init__(
         self,
@@ -40,9 +43,10 @@ class TextPreprocessor:
         remove_mentions=True,
         remove_hashtags=False,
         remove_numbers=False,
+        remove_quotes=False,
     ):
         """
-        Initialize TextPreprocessor.
+        Initialize TextTransform.
 
         Args:
             remove_stopwords (bool): Whether to remove stopwords
@@ -58,6 +62,7 @@ class TextPreprocessor:
         self.remove_mentions = remove_mentions
         self.remove_hashtags = remove_hashtags
         self.remove_numbers = remove_numbers
+        self.remove_quotes = remove_quotes
 
         # Load stopwords if needed
         if self.remove_stopwords:
@@ -68,9 +73,10 @@ class TextPreprocessor:
         else:
             self.stopwords = set()
 
-    def clean_text(self, text: str) -> str:
+    def __call__(self, text: str) -> str:
         """
-        Clean a single text string.
+        Transform a single text string.
+        This method is called when the object is used as a function.
 
         Args:
             text (str): Input text
@@ -99,85 +105,38 @@ class TextPreprocessor:
 
         # Remove numbers
         if self.remove_numbers:
+            text = re.sub(r"&#\d+;?", "", text)
             text = re.sub(r"\d+", "", text)
+
+        # Remove quotes
+        if self.remove_quotes:
+            text = text.replace('"', "").replace("'", "")
+
+        # Remove "&amp and &gt etc."
+        text = re.sub(r"&\w+;?", "", text)
+
+        # Remove "&;"
+        text = text.replace("&;", "")
+
+        # Remove "rt :"
+        text = text.replace("rt :", "").replace("rt", "")
+
+        # Remove punctuation
+        text = text.translate(str.maketrans("", "", string.punctuation))
 
         # Remove extra whitespace
         text = " ".join(text.split())
+
+        # Remove, if start of text, exclamation marks or colon:
+        text = re.sub(r"^[!,:]+", "", text)
 
         # Remove stopwords
         if self.remove_stopwords:
             words = text.split()
             text = " ".join([word for word in words if word not in self.stopwords])
 
-        return text.strip()
+        return text.strip() # Final strip to remove leading/trailing spaces
 
-    def clean_texts(self, texts: Union[List[str], pd.Series]) -> List[str]:
-        """
-        Clean multiple texts.
-
-        Args:
-            texts: List or Series of texts
-
-        Returns:
-            List[str]: Cleaned texts
-        """
-        if isinstance(texts, pd.Series):
-            texts = texts.tolist()
-
-        return [self.clean_text(text) for text in texts]
-
-    def preprocess_dataframe(
-        self, df: pd.DataFrame, text_column: str, output_column: str = "cleaned_text"
-    ) -> pd.DataFrame:
-        """
-        Preprocess text data in a DataFrame.
-
-        Args:
-            df (pd.DataFrame): Input DataFrame
-            text_column (str): Name of column containing text
-            output_column (str): Name for output column with cleaned text
-
-        Returns:
-            pd.DataFrame: DataFrame with cleaned text column
-        """
-        df = df.copy()
-        df[output_column] = self.clean_texts(df[text_column])
-
-        # Remove empty texts
-        df = df[df[output_column].str.len() > 0].reset_index(drop=True)
-
-        print(f"Preprocessed {len(df)} texts")
-        print(
-            f"Average text length: {df[output_column].str.len().mean():.1f} characters"
-        )
-
-        return df
-
-
-def basic_clean(text: str) -> str:
-    """
-    Basic text cleaning function.
-
-    Args:
-        text (str): Input text
-
-    Returns:
-        str: Cleaned text
-    """
-    if not isinstance(text, str):
-        return ""
-
-    # Remove URLs
-    text = re.sub(r"http\S+|www.\S+", "", text)
-
-    # Remove mentions and hashtags
-    text = re.sub(r"@\w+", "", text)
-    text = re.sub(r"#", "", text)
-
-    # Remove extra whitespace
-    text = " ".join(text.split())
-
-    return text.strip()
 
 
 def get_text_stats(texts: Union[List[str], pd.Series]) -> dict:
@@ -209,25 +168,62 @@ def get_text_stats(texts: Union[List[str], pd.Series]) -> dict:
     return stats
 
 
+def create_transform(
+    remove_stopwords=False,
+    lowercase=True,
+    remove_urls=True,
+    remove_mentions=True,
+    remove_hashtags=True,
+    remove_numbers=True,
+    remove_quotes=True,
+) -> TextTransform:
+    """
+    Factory function to create a text transform.
+
+    Args:
+        remove_stopwords (bool): Whether to remove stopwords
+        lowercase (bool): Whether to convert text to lowercase
+        remove_urls (bool): Whether to remove URLs
+        remove_mentions (bool): Whether to remove @mentions
+        remove_hashtags (bool): Whether to remove hashtags
+        remove_numbers (bool): Whether to remove numbers
+
+    Returns:
+        TextTransform: Configured text transform
+    """
+    return TextTransform(
+        remove_stopwords=remove_stopwords,
+        lowercase=lowercase,
+        remove_urls=remove_urls,
+        remove_mentions=remove_mentions,
+        remove_hashtags=remove_hashtags,
+        remove_numbers=remove_numbers,
+        remove_quotes=remove_quotes,
+    )
+
+def _load_config(config_path="config.yaml"):
+    import yaml
+    """Load configuration from YAML file."""
+    with open(config_path, "r") as f:
+        config = yaml.safe_load(f)
+    return config
+
 if __name__ == "__main__":
     # Example usage
     sample_tweets = [
         "RT @user: Check out this link http://example.com #hate #speech",
         "@someone This is an offensive tweet with numbers 123",
-        "Normal tweet without any special content",
+        "THIS IS NOT HATE, JUST A QUOTE: 'Be kind!' &amp; &gt;",
+        "dkeal39q !!! ### $$$ bruh what the fuck???",
     ]
+    config = _load_config()
 
-    print("=== Example Preprocessing ===")
-    preprocessor = TextPreprocessor(
-        remove_stopwords=False,
-        lowercase=True,
-        remove_urls=True,
-        remove_mentions=True,
-        remove_hashtags=True,
-    )
-
-    cleaned = preprocessor.clean_texts(sample_tweets)
-
-    for original, clean in zip(sample_tweets, cleaned):
-        print(f"\nOriginal: {original}")
-        print(f"Cleaned:  {clean}")
+    print("\n\n=== Example: Using TextTransform with Dataset ===")
+    transform = create_transform(**config["preprocessing"])
+    
+    print(f"Transform on sample:")
+    for tweet in sample_tweets:
+        print(f"Original: '{tweet}'")
+        print(f"Transformed: '{transform(tweet)}'")
+        print("---")
+    
