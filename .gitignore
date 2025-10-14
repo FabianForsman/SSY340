@@ -1,9 +1,7 @@
-# Project-specific ignores
-data/
-
 # any .csv files in the data/ or output/ directories
-data/*.csv
+data/*/*.csv
 outputs/*.csv
+data/embeddings/*.npy
 
 # Keep .gitkeep files
 !data/.gitkeep
