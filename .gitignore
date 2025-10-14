@@ -2,7 +2,7 @@
 data/
 # any .csv files in the data/ or output/ directories
 data/*.csv
-output/*.csv
+outputs/*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
