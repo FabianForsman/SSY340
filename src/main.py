@@ -281,7 +281,7 @@ def run_pipeline(config):
     dataset_raw = load_and_create_dataset(config)
 
     # Visualize class distribution
-    visualize_class_dist(dataset_raw)
+    #visualize_class_dist(dataset_raw)
     
     # Step 2: Apply Preprocessing
     dataset, text_transform = apply_preprocessing(config, dataset_raw)
@@ -290,7 +290,7 @@ def run_pipeline(config):
     dataset = apply_data_augmentation(config, dataset)
 
     # Visualize class distribution after augmentation
-    visualize_class_dist(dataset)
+    #visualize_class_dist(dataset)
 
     # Step 4: Balance the dataset
     dataset = balance_dataset(dataset)
@@ -300,7 +300,7 @@ def run_pipeline(config):
     dataset.df = dataset.df.sample(frac=1, random_state=42).reset_index(drop=True)
 
     # Visualize class distribution after balancing
-    visualize_class_dist(dataset)
+    #visualize_class_dist(dataset)
 
     # Create DataLoaders for train, dev, test splits
     dataloaders = create_dataloaders(
@@ -313,7 +313,26 @@ def run_pipeline(config):
     # Step 8: Save processed data
     save_processed_data(dataloaders, ("train.csv", "dev.csv", "test.csv"), config)
 
-    return None
+    # Step 6: Generate Embeddings
+    print("\n" + "=" * 70)
+    print("STEP 6: GENERATING EMBEDDINGS")
+    print("=" * 70)
+    generator = EmbeddingGenerator(model_name=config["embedding"]["model"])
+    all_texts = [dataset[i][0] for i in range(len(dataset))]
+    all_labels = dataset.df[dataset.label_column].tolist()
+    embeddings = generator.encode(
+        all_texts,
+        batch_size=32,
+        show_progress=True,
+        normalize=True
+    )
+    embeddings_path = Path(config["paths"]["embeddings_dir"]) / "embeddings.npy"
+    generator.save_embeddings(embeddings, embeddings_path)
+
+    # Step 7: Calculate Similarities
+    calculate_similarities(embeddings, all_texts, all_labels, generator, embeddings_path)
+
+    return embeddings
 
 
 def main():
