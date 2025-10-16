@@ -23,6 +23,7 @@ class HateSpeechDataset(Dataset):
             text_column (str): Name of the column containing text data
             label_column (str): Name of the column containing labels
         """
+        super().__init__()
         root = Path(root)
         if not (root.exists() and root.is_dir()):
             raise ValueError(f"Data root '{root}' is invalid")
@@ -144,6 +145,7 @@ class UnlabeledTweetDataset(Dataset):
             transform (callable, optional): Optional transform to be applied on text samples
             text_column (str): Name of the column containing text data
         """
+        super().__init__()
         root = Path(root)
         if not (root.exists() and root.is_dir()):
             raise ValueError(f"Data root '{root}' is invalid")
