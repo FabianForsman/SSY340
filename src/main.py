@@ -4,6 +4,10 @@ Orchestrates the entire pipeline: data loading, preprocessing,
 embedding generation, clustering, and evaluation.
 """
 
+import os
+# Suppress tokenizers parallelism warning
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 import argparse
 import yaml
 import numpy as np
@@ -21,6 +25,9 @@ from preprocessing import create_transform
 from embeddings import EmbeddingGenerator
 from visualization import visualize_class_dist
 from data_augmentation import data_agumentation, augment_data_to_target_count
+from semi_supervised import run_self_training, SelfTrainingClassifier
+from evaluation import evaluate_semi_supervised, plot_self_training_progress
+from clustering import KMeansClustering, evaluate_clustering
 
 
 def load_config(config_path="config.yaml"):
@@ -268,7 +275,7 @@ def run_pipeline(config):
         config (dict): Configuration dictionary
         
     Returns:
-        np.ndarray: Generated embeddings
+        tuple: (embeddings, dataloaders, all_labels) - Generated embeddings, dataloaders, and labels
     """
     print("=" * 70)
     print("HATE SPEECH DETECTION - UNSUPERVISED LEARNING")
@@ -332,7 +339,130 @@ def run_pipeline(config):
     # Step 7: Calculate Similarities
     calculate_similarities(embeddings, all_texts, all_labels, generator, embeddings_path)
 
-    return embeddings
+    return embeddings, dataloaders, np.array(all_labels)
+
+
+def run_semi_supervised_pipeline(config, embeddings, all_labels, dataloaders):
+    """
+    Run semi-supervised self-training pipeline.
+    
+    Args:
+        config (dict): Configuration dictionary
+        embeddings (np.ndarray): All embeddings
+        all_labels (np.ndarray): All labels
+        dataloaders (tuple): (train_loader, dev_loader, test_loader)
+        
+    Returns:
+        tuple: (classifier, test_predictions, test_labels)
+    """
+    if not config.get('semi_supervised', {}).get('enabled', False):
+        print("\nSemi-supervised learning not enabled. Skipping.")
+        return None, None, None
+    
+    print("\n" + "=" * 70)
+    print("STEP 8: SEMI-SUPERVISED SELF-TRAINING")
+    print("=" * 70)
+    
+    train_loader, dev_loader, test_loader = dataloaders
+    
+    # Get train/dev/test splits from embeddings
+    # We need to extract them in the same order as the dataloaders
+    train_size = len(train_loader.dataset)
+    dev_size = len(dev_loader.dataset)
+    test_size = len(test_loader.dataset)
+    
+    # Split embeddings and labels
+    embeddings_train = embeddings[:train_size]
+    labels_train = all_labels[:train_size]
+    
+    embeddings_dev = embeddings[train_size:train_size + dev_size]
+    labels_dev = all_labels[train_size:train_size + dev_size]
+    
+    embeddings_test = embeddings[train_size + dev_size:]
+    labels_test = all_labels[train_size + dev_size:]
+    
+    # Simulate semi-supervised scenario:
+    # Use only a fraction of training labels, treat rest as unlabeled
+    train_split = config.get('semi_supervised', {}).get('train_split', 0.5)
+    n_labeled = int(len(labels_train) * train_split)
+    
+    print(f"\nSimulating semi-supervised scenario:")
+    print(f"  Using {n_labeled}/{len(labels_train)} training labels ({train_split*100:.0f}%)")
+    print(f"  Treating {len(labels_train) - n_labeled} samples as unlabeled")
+    
+    # Split training data into labeled and unlabeled
+    # Shuffle indices for random split
+    np.random.seed(config.get('random_seed', 42))
+    indices = np.random.permutation(len(labels_train))
+    labeled_indices = indices[:n_labeled]
+    unlabeled_indices = indices[n_labeled:]
+    
+    embeddings_labeled = embeddings_train[labeled_indices]
+    labels_labeled = labels_train[labeled_indices]
+    
+    embeddings_unlabeled = embeddings_train[unlabeled_indices]
+    labels_unlabeled_true = labels_train[unlabeled_indices]  # Keep for evaluation
+    
+    # Run self-training
+    classifier, pseudo_labels = run_self_training(
+        embeddings_labeled,
+        labels_labeled,
+        embeddings_unlabeled,
+        config,
+        verbose=True
+    )
+    
+    # Evaluate on test set
+    print("\n" + "=" * 70)
+    print("EVALUATING ON TEST SET")
+    print("=" * 70)
+    
+    # Predict on test set
+    test_predictions = classifier.predict(embeddings_test)
+    
+    # Define target names
+    target_names = ['Hate Speech', 'Offensive Language', 'Neither']
+    
+    # Comprehensive evaluation
+    test_metrics = evaluate_semi_supervised(
+        labels_labeled,  # Original labeled training data
+        labels_test,
+        test_predictions,
+        pseudo_labels,
+        target_names=target_names,
+        output_dir=Path(config["paths"]["results_dir"])
+    )
+    
+    # Save results
+    results_dir = Path(config["paths"]["results_dir"])
+    classifier.save_results(results_dir)
+    
+    # Plot training progress
+    history_df = classifier.get_history_dataframe()
+    if len(history_df) > 0:
+        plot_self_training_progress(
+            history_df,
+            save_path=results_dir / "self_training_progress.png"
+        )
+    
+    # Save test predictions
+    test_results_df = pd.DataFrame({
+        'true_label': labels_test,
+        'predicted_label': test_predictions,
+        'true_label_name': [target_names[int(l)] if l >= 0 else 'Unknown' for l in labels_test],
+        'predicted_label_name': [target_names[int(l)] if l >= 0 and l < len(target_names) else 'Unknown' for l in test_predictions]
+    })
+    test_results_path = results_dir / "test_predictions.csv"
+    test_results_df.to_csv(test_results_path, index=False)
+    print(f"\nSaved test predictions to {test_results_path}")
+    
+    # Save evaluation metrics
+    metrics_df = pd.DataFrame([test_metrics])
+    metrics_path = results_dir / "test_metrics.csv"
+    metrics_df.to_csv(metrics_path, index=False)
+    print(f"Saved test metrics to {metrics_path}")
+    
+    return classifier, test_predictions, labels_test
 
 
 def main():
@@ -349,14 +479,33 @@ def main():
     # Load configuration
     config = load_config(args.config)
 
-    # Run pipeline
-    embeddings = run_pipeline(config)
+    # Run main pipeline - returns embeddings, dataloaders, and labels from balanced dataset
+    embeddings, dataloaders, all_labels = run_pipeline(config)
+    
+    # Run semi-supervised pipeline with the same dataloaders and embeddings
+    classifier, test_predictions, test_labels = run_semi_supervised_pipeline(
+        config,
+        embeddings,
+        all_labels,
+        dataloaders
+    )
 
     print("\n" + "=" * 70)
     print("RESULTS SUMMARY")
     print("=" * 70)
     
     print(f"Embedding dimension: {embeddings.shape[1]}")
+    
+    if classifier is not None:
+        print(f"Semi-supervised training completed:")
+        print(f"  Iterations: {len(classifier.history['iteration'])}")
+        print(f"  Final labeled samples: {classifier.history['n_labeled'][-1] if classifier.history['n_labeled'] else 0}")
+        
+        if test_predictions is not None and test_labels is not None:
+            from evaluation import calculate_metrics
+            final_metrics = calculate_metrics(test_labels, test_predictions)
+            print(f"  Test accuracy: {final_metrics['accuracy']:.4f}")
+            print(f"  Test macro F1: {final_metrics['macro_f1']:.4f}")
     
     print("\n" + "=" * 70)
 

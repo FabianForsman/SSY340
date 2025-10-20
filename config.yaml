@@ -50,3 +50,14 @@ data_augmentation:
     synonym_replacement:
       enabled: true
       n: 3 # Number of words to replace with synonyms
+
+# Semi-supervised learning settings
+semi_supervised:
+  enabled: true # Set to true to enable semi-supervised self-training
+  clustering_method: "kmeans" # 'kmeans', 'dbscan', or 'hierarchical'
+  n_clusters: 3 # Number of clusters (for kmeans/hierarchical)
+  confidence_threshold: 0.8 # Confidence threshold for pseudo-labeling [0-1]
+  max_iterations: 5 # Maximum number of self-training iterations
+  min_samples_per_iteration: 10 # Minimum samples to add per iteration
+  use_silhouette_for_confidence: true # Use silhouette score for confidence
+  train_split: 0.5 # Fraction of training data to use as labeled (rest is unlabeled)
