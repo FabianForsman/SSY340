@@ -119,7 +119,8 @@ def run_experiment_2_semi_supervised_model_based(
     label_fraction: float = 0.1,
     confidence_threshold: float = 0.8,
     output_dir: str = "outputs/experiments",
-    config_path: str = "config.yaml"
+    config_path: str = "config.yaml",
+    k_neighbors: int = 5
 ):
     """
     Experiment 2: Semi-supervised with model-based pseudo-labeling.
@@ -196,7 +197,7 @@ def run_experiment_2_semi_supervised_model_based(
         labeled_texts=train_df_labeled['text'].tolist(),
         labeled_labels=train_df_labeled['label'].values,
         confidence_threshold=confidence_threshold,
-        k_neighbors=5
+        k_neighbors=k_neighbors
     )
     
     # Check if pseudo-labeling was successful
@@ -502,6 +503,13 @@ def main():
     )
     
     parser.add_argument(
+        '--k-neighbors',
+        type=int,
+        default=5,
+        help='Number of neighbors for k-NN pseudo-labeling'
+    )
+    
+    parser.add_argument(
         '--experiments',
         nargs='+',
         choices=['exp1', 'exp2', 'exp3', 'all'],
@@ -533,7 +541,8 @@ def main():
             label_fraction=args.label_fraction,
             confidence_threshold=args.confidence_threshold,
             output_dir=args.output_dir,
-            config_path=args.config
+            config_path=args.config,
+            k_neighbors=args.k_neighbors
         )
     
     if 'exp3' in run_experiments:
