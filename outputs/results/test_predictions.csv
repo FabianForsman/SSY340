@@ -1,0 +1,5758 @@
+true_label,predicted_label,true_label_name,predicted_label_name
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,1,Hate Speech,Offensive Language
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,1,Hate Speech,Offensive Language
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,1,Neither,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,1,Neither,Offensive Language
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,1,Offensive Language,Offensive Language
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,1,Neither,Offensive Language
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+2,1,Neither,Offensive Language
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,1,Neither,Offensive Language
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,1,Neither,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,1,Offensive Language,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,1,Neither,Offensive Language
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,1,Hate Speech,Offensive Language
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,1,Hate Speech,Offensive Language
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,1,Offensive Language,Offensive Language
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,1,Offensive Language,Offensive Language
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,1,Neither,Offensive Language
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,0,Neither,Hate Speech
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+1,0,Offensive Language,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+2,1,Neither,Offensive Language
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,1,Offensive Language,Offensive Language
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+0,2,Hate Speech,Neither
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+0,1,Hate Speech,Offensive Language
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,0,Offensive Language,Hate Speech
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+0,0,Hate Speech,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+1,0,Offensive Language,Hate Speech
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech
+0,2,Hate Speech,Neither
+2,2,Neither,Neither
+2,2,Neither,Neither
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+1,2,Offensive Language,Neither
+0,2,Hate Speech,Neither
+0,0,Hate Speech,Hate Speech
+2,0,Neither,Hate Speech
+1,2,Offensive Language,Neither
+1,2,Offensive Language,Neither
+0,0,Hate Speech,Hate Speech

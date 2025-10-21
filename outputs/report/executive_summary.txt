@@ -1,0 +1,57 @@
+
+======================================================================
+SEMI-SUPERVISED SELF-TRAINING - EXECUTIVE SUMMARY
+======================================================================
+
+EXPERIMENTAL SETUP
+------------------
+- Algorithm: K-Means Clustering with Self-Training
+- Number of Clusters: 12
+- Confidence Threshold: 0.65
+- Initial Labeled Samples: 39796
+- Initial Unlabeled Samples: 502
+
+TRAINING RESULTS
+----------------
+- Total Iterations Completed: 1
+- Final Labeled Samples: 39796
+- Total Pseudo-Labels Added: 11588
+- Unlabeled Samples Remaining: 502
+
+CLUSTERING QUALITY
+------------------
+- Final Cluster Purity: 0.3431
+- Final Silhouette Score: 0.0360
+- Average Confidence (final): 0.7644
+
+TEST SET PERFORMANCE
+--------------------
+- Accuracy: 0.3295 (32.95%)
+- Macro F1-Score: 0.2558
+- Weighted F1-Score: 0.2575
+
+CLASS-WISE PERFORMANCE
+----------------------
+
+KEY OBSERVATIONS
+----------------
+1. Low clustering quality (purity: 34.31%) indicates
+   that hate speech classes are not naturally separable in embedding space.
+
+2. Early stopping after 1 iterations suggests limited
+   benefit from additional pseudo-labeling.
+
+3. The model shows bias toward predicting "Neither" class, likely due to
+   cluster-to-label mapping skewness.
+
+RECOMMENDATIONS
+---------------
+1. Consider supervised learning approaches given the substantial amount
+   of labeled data (39796 samples).
+
+2. Explore alternative embedding models or fine-tuning SBERT on the
+   hate speech domain.
+
+3. Investigate ensemble methods combining multiple clustering algorithms.
+
+======================================================================

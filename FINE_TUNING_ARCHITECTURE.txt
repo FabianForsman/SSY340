@@ -1,0 +1,142 @@
+# Fine-Tuning System Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    HATE SPEECH FINE-TUNING SYSTEM                        │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│  INPUT: data/raw/labeled_data.csv                                        │
+│  - 25,000+ tweets                                                        │
+│  - 3 classes: hate (5%), offensive (77%), neither (17%)                 │
+└────────────────────────────┬────────────────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  PREPROCESSING (src/preprocessing.py - TextTransform)                    │
+│  ✓ Remove URLs, mentions, hashtags                                      │
+│  ✓ Lowercase, remove stopwords                                          │
+│  ✓ Remove numbers, quotes                                               │
+└────────────────────────────┬────────────────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  DATA PREPARATION                                                        │
+│  ✓ Stratified split: 70% train, 9% val, 21% test                       │
+│  ✓ Optional class balancing (oversample minorities)                     │
+│  ✓ Convert to InputExample format                                       │
+└────────────────────────────┬────────────────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  FINE-TUNING (src/fine_tune_model.py)                                    │
+│                                                                          │
+│  Base Model: all-MiniLM-L6-v2                                           │
+│  ├── SBERT Encoder (384-dim embeddings)                                │
+│  └── + Softmax Classification Head (384 → 3 classes)                   │
+│                                                                          │
+│  Training:                                                               │
+│  ├── Loss: Softmax Classification Loss                                  │
+│  ├── Optimizer: AdamW with warmup (lr=2e-5)                            │
+│  ├── Epochs: 4 (default, configurable 2-8)                             │
+│  ├── Batch Size: 16 (configurable 8-64)                                │
+│  └── Validation: Every 500 steps                                        │
+│                                                                          │
+│  Output: models/fine_tuned/                                             │
+│  ├── pytorch_model.bin (~90MB)                                          │
+│  ├── config.json, tokenizer files                                       │
+│  └── training_info.yaml                                                 │
+└────────────────────────────┬────────────────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  EVALUATION                                                              │
+│  ✓ Test set accuracy (k-NN classifier on embeddings)                   │
+│  ✓ Compare base vs fine-tuned model                                    │
+│  ✓ Generate comparison reports                                          │
+└────────────────────────────┬────────────────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  INTEGRATION OPTIONS                                                     │
+│                                                                          │
+│  Option 1: Update config.yaml                                           │
+│  ├── embedding.model: "models/fine_tuned"                              │
+│  └── Run: python src/main.py --config config.yaml                      │
+│                                                                          │
+│  Option 2: Direct embedding generation                                  │
+│  └── Run: python src/embeddings.py --model models/fine_tuned           │
+│                                                                          │
+│  Option 3: Model comparison                                             │
+│  └── Run: python src/embedding_comparison.py \                         │
+│           --models all-MiniLM-L6-v2 models/fine_tuned                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│  EXPECTED IMPROVEMENTS                                                   │
+│                                                                          │
+│  Metric                    | Base Model | Fine-Tuned | Improvement      │
+│  ──────────────────────────┼────────────┼────────────┼─────────────     │
+│  Clustering Purity         | 71.58%     | 75-85%     | +5-15%          │
+│  Silhouette Score          | 0.0288     | 0.05-0.10  | +70-250%        │
+│  Semi-Supervised Accuracy  | 32.95%     | 40-55%     | +20-70%         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│  COMMAND-LINE INTERFACE                                                  │
+│                                                                          │
+│  Basic Usage:                                                            │
+│  $ python src/fine_tune_model.py                                        │
+│                                                                          │
+│  Optimized for Hate Speech:                                             │
+│  $ python src/fine_tune_model.py --balance-classes --epochs 6 --compare│
+│                                                                          │
+│  Quick Test:                                                             │
+│  $ python src/fine_tune_model.py --epochs 2 --batch-size 8             │
+│                                                                          │
+│  Evaluate Only:                                                          │
+│  $ python src/fine_tune_model.py --evaluate-only models/fine_tuned     │
+│                                                                          │
+│  Full Example:                                                           │
+│  $ python example_fine_tuning.py                                        │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│  FILE STRUCTURE                                                          │
+│                                                                          │
+│  src/                                                                    │
+│  ├── fine_tune_model.py       ← Main fine-tuning script (740 lines)    │
+│  ├── embeddings.py             ← Updated to support fine-tuned models  │
+│  ├── preprocessing.py          ← Text preprocessing (TextTransform)    │
+│  └── __init__.py               ← Package initialization (fixed)        │
+│                                                                          │
+│  Root/                                                                   │
+│  ├── example_fine_tuning.py    ← Complete working example             │
+│  ├── fine_tuning_commands.sh   ← Quick reference script               │
+│  ├── FINE_TUNING_README.md     ← User documentation (500+ lines)      │
+│  ├── FINE_TUNING_SUMMARY.md    ← Technical docs (600+ lines)          │
+│  └── IMPLEMENTATION_FINE_TUNING.md ← This complete summary            │
+│                                                                          │
+│  models/                                                                 │
+│  └── fine_tuned/                ← Output directory                      │
+│      ├── pytorch_model.bin      ← Fine-tuned weights                   │
+│      ├── config.json            ← Model configuration                  │
+│      └── training_info.yaml     ← Training metadata                    │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│  FEATURES                                                                │
+│  ✓ Complete end-to-end fine-tuning workflow                            │
+│  ✓ Softmax classification loss for 3-class task                        │
+│  ✓ Optional class balancing via oversampling                           │
+│  ✓ Stratified train/val/test splits                                    │
+│  ✓ Text preprocessing integration                                       │
+│  ✓ Validation during training (every 500 steps)                        │
+│  ✓ Save best model based on validation accuracy                        │
+│  ✓ Comprehensive evaluation with k-NN classifier                       │
+│  ✓ Base vs fine-tuned model comparison                                 │
+│  ✓ Flexible hyperparameter configuration                               │
+│  ✓ Seamless integration with existing pipeline                         │
+│  ✓ Extensive documentation and examples                                │
+│  ✓ Quick reference command script                                      │
+└─────────────────────────────────────────────────────────────────────────┘
