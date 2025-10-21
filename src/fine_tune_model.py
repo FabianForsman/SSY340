@@ -278,8 +278,13 @@ class HateSpeechFineTuner:
             num_labels=self.num_classes
         )
         
-        # Create evaluator for validation
-        evaluator = self._create_evaluator(val_examples)
+        # Create evaluator for validation (optional, set to None if API issues)
+        try:
+            evaluator = self._create_evaluator(val_examples)
+        except (TypeError, AttributeError) as e:
+            print(f"Warning: Could not create evaluator: {e}")
+            print("Training will continue without validation during training.")
+            evaluator = None
         
         # Calculate training steps
         steps_per_epoch = len(train_dataloader)
