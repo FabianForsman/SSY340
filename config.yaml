@@ -39,9 +39,10 @@ preprocessing:
 # Embedding generation settings
 embedding:
   # Model to use: 'all-MiniLM-L6-v2', 'paraphrase-MiniLM-L6-v2', 'all-mpnet-base-v2', 'simcse-bert'
+  # Or path to fine-tuned model: 'models/finetuned_baseline'
   # Recommended: 'all-MiniLM-L6-v2' (best for short texts, fastest)
   # Alternative: 'simcse-bert' (higher quality similarity, slower)
-  model: "all-MiniLM-L6-v2"
+  model: "models/finetuned_baseline"  # Using fine-tuned model
   batch_size: 64
   normalize: false # Whether to normalize embeddings to unit length
 
