@@ -336,12 +336,12 @@ class HateSpeechFineTuner:
         labels = [example.label for example in val_examples]
         
         # Use LabelAccuracyEvaluator for classification
-        # Updated API: Pass sentences as first positional arg, labels as second
+        # Updated API for sentence-transformers 3.0+
         evaluator = evaluation.LabelAccuracyEvaluator(
-            sentences,
-            labels,
-            name="validation",
-            batch_size=32
+            sentences=sentences,
+            labels=labels,
+            batch_size=32,
+            name="validation"
         )
         
         return evaluator
