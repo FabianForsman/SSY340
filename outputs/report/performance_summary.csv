@@ -1,0 +1,10 @@
+Metric,Value
+Test Accuracy,0.3295
+Macro F1-Score,0.2558
+Weighted F1-Score,0.2575
+Cluster Purity,0.3431
+Silhouette Score,0.0360
+Total Iterations,1
+Final Labeled Samples,39796
+Total Pseudo-Labels,11588
+Average Confidence,0.7644

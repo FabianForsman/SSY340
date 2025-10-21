@@ -9,9 +9,11 @@ from sklearn.metrics import (
     accuracy_score,
     precision_recall_fscore_support,
     confusion_matrix,
-    classification_report
+    classification_report,
+    silhouette_score,
+    normalized_mutual_info_score
 )
-from typing import Dict, Optional, Tuple
+from typing import Dict, Optional, Tuple, List
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
@@ -118,6 +120,299 @@ def calculate_cluster_purity(
     
     purity = total_correct / len(cluster_labels)
     return purity
+
+
+def calculate_silhouette_score(
+    embeddings: np.ndarray,
+    cluster_labels: np.ndarray,
+    metric: str = 'euclidean',
+    sample_size: Optional[int] = None
+) -> float:
+    """
+    Calculate silhouette score for clustering.
+    
+    The silhouette score measures how similar an object is to its own cluster
+    compared to other clusters. Higher values indicate better clustering.
+    
+    Range: [-1, 1]
+    - +1: Sample is far from neighboring clusters (ideal)
+    - 0: Sample is on or very close to decision boundary
+    - -1: Sample is assigned to wrong cluster
+    
+    Args:
+        embeddings (np.ndarray): Feature vectors/embeddings (n_samples, n_features)
+        cluster_labels (np.ndarray): Cluster assignments for each sample
+        metric (str): Distance metric ('euclidean', 'cosine', etc.)
+        sample_size (int, optional): Subsample for speed. None = use all samples
+        
+    Returns:
+        float: Silhouette score [-1, 1]
+    """
+    # Remove noise points (-1 labels)
+    valid_mask = cluster_labels != -1
+    embeddings_valid = embeddings[valid_mask]
+    labels_valid = cluster_labels[valid_mask]
+    
+    # Check if we have enough samples and clusters
+    n_samples = len(labels_valid)
+    n_clusters = len(np.unique(labels_valid))
+    
+    if n_samples < 2:
+        print("Warning: Need at least 2 samples to calculate silhouette score")
+        return 0.0
+    
+    if n_clusters < 2:
+        print("Warning: Need at least 2 clusters to calculate silhouette score")
+        return 0.0
+    
+    # Subsample if requested (for large datasets)
+    if sample_size is not None and n_samples > sample_size:
+        indices = np.random.choice(n_samples, sample_size, replace=False)
+        embeddings_valid = embeddings_valid[indices]
+        labels_valid = labels_valid[indices]
+    
+    try:
+        score = silhouette_score(
+            embeddings_valid,
+            labels_valid,
+            metric=metric
+        )
+        return float(score)
+    except Exception as e:
+        print(f"Warning: Could not calculate silhouette score: {e}")
+        return 0.0
+
+
+def calculate_normalized_mutual_info(
+    cluster_labels: np.ndarray,
+    true_labels: np.ndarray,
+    average_method: str = 'arithmetic'
+) -> float:
+    """
+    Calculate Normalized Mutual Information (NMI) between cluster and true labels.
+    
+    NMI measures the mutual dependence between two labelings.
+    It is normalized to [0, 1] where:
+    - 1: Perfect correlation (clusters perfectly match true labels)
+    - 0: No correlation (independent labelings)
+    
+    Args:
+        cluster_labels (np.ndarray): Cluster assignments
+        true_labels (np.ndarray): Ground truth labels
+        average_method (str): How to average MI ('arithmetic', 'geometric', 'min', 'max')
+        
+    Returns:
+        float: NMI score [0, 1]
+    """
+    # Remove noise points
+    valid_mask = cluster_labels != -1
+    cluster_labels_valid = cluster_labels[valid_mask]
+    true_labels_valid = true_labels[valid_mask]
+    
+    if len(cluster_labels_valid) == 0:
+        return 0.0
+    
+    try:
+        nmi = normalized_mutual_info_score(
+            true_labels_valid,
+            cluster_labels_valid,
+            average_method=average_method
+        )
+        return float(nmi)
+    except Exception as e:
+        print(f"Warning: Could not calculate NMI: {e}")
+        return 0.0
+
+
+def evaluate_clustering(
+    embeddings: np.ndarray,
+    cluster_labels: np.ndarray,
+    true_labels: np.ndarray,
+    metric: str = 'euclidean',
+    verbose: bool = True
+) -> Dict[str, float]:
+    """
+    Comprehensive clustering evaluation using multiple metrics.
+    
+    Args:
+        embeddings (np.ndarray): Feature vectors (n_samples, n_features)
+        cluster_labels (np.ndarray): Cluster assignments
+        true_labels (np.ndarray): Ground truth labels
+        metric (str): Distance metric for silhouette score
+        verbose (bool): Whether to print results
+        
+    Returns:
+        Dict[str, float]: Dictionary containing:
+            - silhouette_score: Measures cluster separation [-1, 1]
+            - cluster_purity: Measures cluster homogeneity [0, 1]
+            - nmi: Normalized Mutual Information [0, 1]
+            - n_clusters: Number of clusters found
+            - n_samples: Number of samples evaluated
+    """
+    # Calculate metrics
+    silhouette = calculate_silhouette_score(embeddings, cluster_labels, metric=metric)
+    purity = calculate_cluster_purity(cluster_labels, true_labels)
+    nmi = calculate_normalized_mutual_info(cluster_labels, true_labels)
+    
+    # Count clusters and samples
+    valid_mask = cluster_labels != -1
+    n_samples = valid_mask.sum()
+    n_clusters = len(np.unique(cluster_labels[valid_mask]))
+    
+    metrics = {
+        'silhouette_score': silhouette,
+        'cluster_purity': purity,
+        'nmi': nmi,
+        'n_clusters': n_clusters,
+        'n_samples': n_samples
+    }
+    
+    if verbose:
+        print("\n" + "=" * 70)
+        print("CLUSTERING EVALUATION")
+        print("=" * 70)
+        print(f"Number of clusters: {n_clusters}")
+        print(f"Number of samples: {n_samples}")
+        print(f"\nMetrics:")
+        print(f"  Silhouette Score: {silhouette:.4f}  (range: [-1, 1], higher is better)")
+        print(f"  Cluster Purity:   {purity:.4f}  (range: [0, 1], higher is better)")
+        print(f"  NMI Score:        {nmi:.4f}  (range: [0, 1], higher is better)")
+        print("=" * 70)
+    
+    return metrics
+
+
+def compare_clustering_methods(
+    embeddings: np.ndarray,
+    clustering_results: Dict[str, np.ndarray],
+    true_labels: np.ndarray,
+    metric: str = 'euclidean'
+) -> pd.DataFrame:
+    """
+    Compare multiple clustering methods using all metrics.
+    
+    Args:
+        embeddings (np.ndarray): Feature vectors
+        clustering_results (Dict[str, np.ndarray]): Dictionary mapping method names to cluster labels
+        true_labels (np.ndarray): Ground truth labels
+        metric (str): Distance metric for silhouette score
+        
+    Returns:
+        pd.DataFrame: Comparison table with all metrics
+    """
+    results = []
+    
+    for method_name, cluster_labels in clustering_results.items():
+        metrics = evaluate_clustering(
+            embeddings,
+            cluster_labels,
+            true_labels,
+            metric=metric,
+            verbose=False
+        )
+        metrics['method'] = method_name
+        results.append(metrics)
+    
+    df = pd.DataFrame(results)
+    
+    # Reorder columns
+    column_order = ['method', 'n_clusters', 'silhouette_score', 'cluster_purity', 'nmi', 'n_samples']
+    df = df[column_order]
+    
+    # Sort by a composite score (average of normalized metrics)
+    df['composite_score'] = (
+        (df['silhouette_score'] + 1) / 2 +  # Normalize from [-1,1] to [0,1]
+        df['cluster_purity'] +
+        df['nmi']
+    ) / 3
+    
+    df = df.sort_values('composite_score', ascending=False)
+    
+    return df
+
+
+def plot_clustering_metrics(
+    metrics_dict: Dict[str, Dict[str, float]],
+    save_path: Optional[Path] = None,
+    title: str = "Clustering Metrics Comparison"
+):
+    """
+    Plot comparison of clustering metrics across different methods.
+    
+    Args:
+        metrics_dict (Dict[str, Dict[str, float]]): Dictionary mapping method names to metrics
+        save_path (Path, optional): Path to save figure
+        title (str): Plot title
+    """
+    methods = list(metrics_dict.keys())
+    silhouette_scores = [metrics_dict[m]['silhouette_score'] for m in methods]
+    purity_scores = [metrics_dict[m]['cluster_purity'] for m in methods]
+    nmi_scores = [metrics_dict[m]['nmi'] for m in methods]
+    
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    fig.suptitle(title, fontsize=14, fontweight='bold')
+    
+    # Silhouette Score
+    ax = axes[0]
+    bars = ax.bar(methods, silhouette_scores, color='skyblue', edgecolor='black', linewidth=1.5)
+    ax.set_ylabel('Silhouette Score', fontweight='bold')
+    ax.set_title('Silhouette Score\n(Higher = Better Separation)', fontsize=11)
+    ax.set_ylim([-1, 1])
+    ax.axhline(y=0, color='red', linestyle='--', linewidth=1, alpha=0.5)
+    ax.grid(True, alpha=0.3, axis='y')
+    
+    # Add value labels
+    for bar in bars:
+        height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width()/2., height,
+                f'{height:.3f}',
+                ha='center', va='bottom' if height >= 0 else 'top',
+                fontweight='bold', fontsize=10)
+    
+    # Cluster Purity
+    ax = axes[1]
+    bars = ax.bar(methods, purity_scores, color='lightgreen', edgecolor='black', linewidth=1.5)
+    ax.set_ylabel('Cluster Purity', fontweight='bold')
+    ax.set_title('Cluster Purity\n(Higher = More Homogeneous)', fontsize=11)
+    ax.set_ylim([0, 1])
+    ax.grid(True, alpha=0.3, axis='y')
+    
+    # Add value labels
+    for bar in bars:
+        height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width()/2., height,
+                f'{height:.3f}',
+                ha='center', va='bottom', fontweight='bold', fontsize=10)
+    
+    # NMI Score
+    ax = axes[2]
+    bars = ax.bar(methods, nmi_scores, color='salmon', edgecolor='black', linewidth=1.5)
+    ax.set_ylabel('NMI Score', fontweight='bold')
+    ax.set_title('Normalized Mutual Information\n(Higher = Better Match)', fontsize=11)
+    ax.set_ylim([0, 1])
+    ax.grid(True, alpha=0.3, axis='y')
+    
+    # Add value labels
+    for bar in bars:
+        height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width()/2., height,
+                f'{height:.3f}',
+                ha='center', va='bottom', fontweight='bold', fontsize=10)
+    
+    # Rotate x-axis labels if needed
+    for ax in axes:
+        if len(methods) > 3:
+            ax.tick_params(axis='x', rotation=45)
+    
+    plt.tight_layout()
+    
+    if save_path:
+        plt.savefig(save_path, dpi=300, bbox_inches='tight')
+        print(f"Saved clustering metrics plot to {save_path}")
+    else:
+        plt.show()
+    
+    plt.close()
 
 
 def print_classification_report(

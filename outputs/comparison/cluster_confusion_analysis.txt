@@ -1,0 +1,254 @@
+
+======================================================================
+CLUSTER-TO-LABEL CONFUSION ANALYSIS
+======================================================================
+
+======================================================================
+MODEL: all-MiniLM-L6-v2
+======================================================================
+
+CLUSTER COMPOSITION:
+----------------------------------------------------------------------
+
+Cluster 0 (202 samples):
+  Hate Speech: 40 (19.8%)
+  Offensive Language: 13 (6.4%)
+  Neither: 149 (73.8%)
+  → Dominant: Neither (73.8%)
+
+Cluster 1 (278 samples):
+  Hate Speech: 116 (41.7%)
+  Offensive Language: 24 (8.6%)
+  Neither: 138 (49.6%)
+  → Dominant: Neither (49.6%)
+
+Cluster 2 (325 samples):
+  Hate Speech: 165 (50.8%)
+  Offensive Language: 152 (46.8%)
+  Neither: 8 (2.5%)
+  → Dominant: Hate Speech (50.8%)
+
+Cluster 3 (96 samples):
+  Hate Speech: 0 (0.0%)
+  Offensive Language: 7 (7.3%)
+  Neither: 89 (92.7%)
+  → Dominant: Neither (92.7%)
+
+Cluster 4 (158 samples):
+  Hate Speech: 21 (13.3%)
+  Offensive Language: 13 (8.2%)
+  Neither: 124 (78.5%)
+  → Dominant: Neither (78.5%)
+
+Cluster 5 (507 samples):
+  Hate Speech: 71 (14.0%)
+  Offensive Language: 429 (84.6%)
+  Neither: 7 (1.4%)
+  → Dominant: Offensive Language (84.6%)
+
+Cluster 6 (335 samples):
+  Hate Speech: 90 (26.9%)
+  Offensive Language: 54 (16.1%)
+  Neither: 191 (57.0%)
+  → Dominant: Neither (57.0%)
+
+Cluster 7 (253 samples):
+  Hate Speech: 218 (86.2%)
+  Offensive Language: 32 (12.6%)
+  Neither: 3 (1.2%)
+  → Dominant: Hate Speech (86.2%)
+
+Cluster 8 (139 samples):
+  Hate Speech: 27 (19.4%)
+  Offensive Language: 111 (79.9%)
+  Neither: 1 (0.7%)
+  → Dominant: Offensive Language (79.9%)
+
+Cluster 9 (168 samples):
+  Hate Speech: 33 (19.6%)
+  Offensive Language: 123 (73.2%)
+  Neither: 12 (7.1%)
+  → Dominant: Offensive Language (73.2%)
+
+Cluster 10 (232 samples):
+  Hate Speech: 156 (67.2%)
+  Offensive Language: 31 (13.4%)
+  Neither: 45 (19.4%)
+  → Dominant: Hate Speech (67.2%)
+
+Cluster 11 (307 samples):
+  Hate Speech: 61 (19.9%)
+  Offensive Language: 23 (7.5%)
+  Neither: 223 (72.6%)
+  → Dominant: Neither (72.6%)
+
+======================================================================
+LABEL DISTRIBUTION ACROSS CLUSTERS:
+----------------------------------------------------------------------
+
+Hate Speech (998 samples):
+  Cluster 7: 218 samples (21.8%)
+  Cluster 2: 165 samples (16.5%)
+  Cluster 10: 156 samples (15.6%)
+  Cluster 1: 116 samples (11.6%)
+  Cluster 6: 90 samples (9.0%)
+  Cluster 5: 71 samples (7.1%)
+  Cluster 11: 61 samples (6.1%)
+  Cluster 0: 40 samples (4.0%)
+  Cluster 9: 33 samples (3.3%)
+  Cluster 8: 27 samples (2.7%)
+  Cluster 4: 21 samples (2.1%)
+
+Offensive Language (1012 samples):
+  Cluster 5: 429 samples (42.4%)
+  Cluster 2: 152 samples (15.0%)
+  Cluster 9: 123 samples (12.2%)
+  Cluster 8: 111 samples (11.0%)
+  Cluster 6: 54 samples (5.3%)
+  Cluster 7: 32 samples (3.2%)
+  Cluster 10: 31 samples (3.1%)
+  Cluster 1: 24 samples (2.4%)
+  Cluster 11: 23 samples (2.3%)
+  Cluster 0: 13 samples (1.3%)
+  Cluster 4: 13 samples (1.3%)
+  Cluster 3: 7 samples (0.7%)
+
+Neither (990 samples):
+  Cluster 11: 223 samples (22.5%)
+  Cluster 6: 191 samples (19.3%)
+  Cluster 0: 149 samples (15.1%)
+  Cluster 1: 138 samples (13.9%)
+  Cluster 4: 124 samples (12.5%)
+  Cluster 3: 89 samples (9.0%)
+  Cluster 10: 45 samples (4.5%)
+  Cluster 9: 12 samples (1.2%)
+  Cluster 2: 8 samples (0.8%)
+  Cluster 5: 7 samples (0.7%)
+  Cluster 7: 3 samples (0.3%)
+  Cluster 8: 1 samples (0.1%)
+
+
+======================================================================
+MODEL: simcse-bert
+======================================================================
+
+CLUSTER COMPOSITION:
+----------------------------------------------------------------------
+
+Cluster 0 (189 samples):
+  Hate Speech: 49 (25.9%)
+  Offensive Language: 14 (7.4%)
+  Neither: 126 (66.7%)
+  → Dominant: Neither (66.7%)
+
+Cluster 1 (248 samples):
+  Hate Speech: 174 (70.2%)
+  Offensive Language: 29 (11.7%)
+  Neither: 45 (18.1%)
+  → Dominant: Hate Speech (70.2%)
+
+Cluster 2 (307 samples):
+  Hate Speech: 62 (20.2%)
+  Offensive Language: 26 (8.5%)
+  Neither: 219 (71.3%)
+  → Dominant: Neither (71.3%)
+
+Cluster 3 (416 samples):
+  Hate Speech: 68 (16.3%)
+  Offensive Language: 346 (83.2%)
+  Neither: 2 (0.5%)
+  → Dominant: Offensive Language (83.2%)
+
+Cluster 4 (117 samples):
+  Hate Speech: 11 (9.4%)
+  Offensive Language: 8 (6.8%)
+  Neither: 98 (83.8%)
+  → Dominant: Neither (83.8%)
+
+Cluster 5 (431 samples):
+  Hate Speech: 153 (35.5%)
+  Offensive Language: 174 (40.4%)
+  Neither: 104 (24.1%)
+  → Dominant: Offensive Language (40.4%)
+
+Cluster 6 (250 samples):
+  Hate Speech: 90 (36.0%)
+  Offensive Language: 102 (40.8%)
+  Neither: 58 (23.2%)
+  → Dominant: Offensive Language (40.8%)
+
+Cluster 7 (437 samples):
+  Hate Speech: 69 (15.8%)
+  Offensive Language: 42 (9.6%)
+  Neither: 326 (74.6%)
+  → Dominant: Neither (74.6%)
+
+Cluster 8 (280 samples):
+  Hate Speech: 118 (42.1%)
+  Offensive Language: 162 (57.9%)
+  Neither: 0 (0.0%)
+  → Dominant: Offensive Language (57.9%)
+
+Cluster 9 (65 samples):
+  Hate Speech: 58 (89.2%)
+  Offensive Language: 5 (7.7%)
+  Neither: 2 (3.1%)
+  → Dominant: Hate Speech (89.2%)
+
+Cluster 10 (141 samples):
+  Hate Speech: 120 (85.1%)
+  Offensive Language: 20 (14.2%)
+  Neither: 1 (0.7%)
+  → Dominant: Hate Speech (85.1%)
+
+Cluster 11 (119 samples):
+  Hate Speech: 26 (21.8%)
+  Offensive Language: 84 (70.6%)
+  Neither: 9 (7.6%)
+  → Dominant: Offensive Language (70.6%)
+
+======================================================================
+LABEL DISTRIBUTION ACROSS CLUSTERS:
+----------------------------------------------------------------------
+
+Hate Speech (998 samples):
+  Cluster 1: 174 samples (17.4%)
+  Cluster 5: 153 samples (15.3%)
+  Cluster 10: 120 samples (12.0%)
+  Cluster 8: 118 samples (11.8%)
+  Cluster 6: 90 samples (9.0%)
+  Cluster 7: 69 samples (6.9%)
+  Cluster 3: 68 samples (6.8%)
+  Cluster 2: 62 samples (6.2%)
+  Cluster 9: 58 samples (5.8%)
+  Cluster 0: 49 samples (4.9%)
+  Cluster 11: 26 samples (2.6%)
+  Cluster 4: 11 samples (1.1%)
+
+Offensive Language (1012 samples):
+  Cluster 3: 346 samples (34.2%)
+  Cluster 5: 174 samples (17.2%)
+  Cluster 8: 162 samples (16.0%)
+  Cluster 6: 102 samples (10.1%)
+  Cluster 11: 84 samples (8.3%)
+  Cluster 7: 42 samples (4.2%)
+  Cluster 1: 29 samples (2.9%)
+  Cluster 2: 26 samples (2.6%)
+  Cluster 10: 20 samples (2.0%)
+  Cluster 0: 14 samples (1.4%)
+  Cluster 4: 8 samples (0.8%)
+  Cluster 9: 5 samples (0.5%)
+
+Neither (990 samples):
+  Cluster 7: 326 samples (32.9%)
+  Cluster 2: 219 samples (22.1%)
+  Cluster 0: 126 samples (12.7%)
+  Cluster 5: 104 samples (10.5%)
+  Cluster 4: 98 samples (9.9%)
+  Cluster 6: 58 samples (5.9%)
+  Cluster 1: 45 samples (4.5%)
+  Cluster 11: 9 samples (0.9%)
+  Cluster 3: 2 samples (0.2%)
+  Cluster 9: 2 samples (0.2%)
+  Cluster 10: 1 samples (0.1%)
+
