@@ -188,12 +188,15 @@ def run_experiment_2_semi_supervised_model_based(
         learning_rate=2e-5
     )
     
-    # Step 2: Generate pseudo-labels for unlabeled data
+    # Step 2: Generate pseudo-labels for unlabeled data using k-NN on embeddings
     print("\n--- Step 2: Generating pseudo-labels ---")
     pseudo_labels, confidences = generate_pseudo_labels_with_model(
         model=fine_tuner.model,
         texts=train_df_unlabeled['text'].tolist(),
-        confidence_threshold=confidence_threshold
+        labeled_texts=train_df_labeled['text'].tolist(),
+        labeled_labels=train_df_labeled['label'].values,
+        confidence_threshold=confidence_threshold,
+        k_neighbors=5
     )
     
     # Check if pseudo-labeling was successful
@@ -272,56 +275,68 @@ def run_experiment_2_semi_supervised_model_based(
 def generate_pseudo_labels_with_model(
     model: SentenceTransformer,
     texts: list,
-    confidence_threshold: float = 0.8
+    labeled_texts: list,
+    labeled_labels: np.ndarray,
+    confidence_threshold: float = 0.8,
+    k_neighbors: int = 5
 ) -> tuple:
     """
-    Generate pseudo-labels using a trained model.
+    Generate pseudo-labels using k-NN on embeddings from trained model.
     
-    Returns predicted labels and confidence scores.
+    This is a valid semi-supervised approach: use the fine-tuned model's embeddings
+    with k-NN to predict labels on unlabeled data.
+    
+    Args:
+        model: Trained SentenceTransformer model
+        texts: Unlabeled texts to generate pseudo-labels for
+        labeled_texts: Labeled texts to train k-NN on
+        labeled_labels: Labels for the labeled texts
+        confidence_threshold: Minimum confidence for pseudo-labels
+        k_neighbors: Number of neighbors for k-NN
+        
+    Returns:
+        predictions: Predicted labels
+        confidences: Confidence scores (proportion of matching neighbors)
     """
-    from torch.nn.functional import softmax
-    import torch.nn as nn
+    from sklearn.neighbors import KNeighborsClassifier
     
-    # Get embeddings
-    embeddings = model.encode(
+    print(f"Using k-NN (k={k_neighbors}) on fine-tuned embeddings for pseudo-labeling...")
+    
+    # Get embeddings for labeled data
+    print("Encoding labeled data...")
+    labeled_embeddings = model.encode(
+        labeled_texts,
+        batch_size=64,
+        show_progress_bar=True,
+        convert_to_numpy=True
+    )
+    
+    # Get embeddings for unlabeled data
+    print("Encoding unlabeled data...")
+    unlabeled_embeddings = model.encode(
         texts,
         batch_size=64,
         show_progress_bar=True,
-        convert_to_tensor=True
+        convert_to_numpy=True
     )
     
-    # Find the classifier layer added by SoftmaxLoss
-    # In sentence-transformers, it's typically in the last module
-    classifier = None
+    # Train k-NN classifier on labeled embeddings
+    knn = KNeighborsClassifier(n_neighbors=k_neighbors)
+    knn.fit(labeled_embeddings, labeled_labels)
     
-    # Check if model has a direct classifier attribute
-    if hasattr(model, 'classifier'):
-        classifier = model.classifier
-    else:
-        # Look through all modules for a Linear layer with 3 outputs (num_classes)
-        for name, module in model.named_modules():
-            if isinstance(module, nn.Linear):
-                # Check if this could be our classifier (384 -> 3)
-                if module.out_features == 3:  # num_classes
-                    classifier = module
-                    print(f"Found classifier: {name} with shape {module.weight.shape}")
-                    break
+    # Predict on unlabeled data
+    predictions = knn.predict(unlabeled_embeddings)
     
-    if classifier is None:
-        print("Warning: Could not find classifier layer. Using k-NN fallback for pseudo-labeling.")
-        # Fallback: use k-NN on embeddings
-        from sklearn.neighbors import KNeighborsClassifier
-        # This is a simplified fallback - in practice you'd need labeled data
-        # For now, return empty predictions
-        return np.array([]), np.array([])
+    # Get confidence scores (probability of predicted class)
+    # For k-NN, confidence = proportion of k neighbors with predicted label
+    proba = knn.predict_proba(unlabeled_embeddings)
+    confidences = np.max(proba, axis=1)
     
-    # Get predictions
-    with torch.no_grad():
-        logits = classifier(embeddings)
-        probs = softmax(logits, dim=1)
-        confidences, predictions = torch.max(probs, dim=1)
+    print(f"Predictions generated for {len(predictions)} samples")
+    print(f"Confidence range: [{confidences.min():.3f}, {confidences.max():.3f}]")
+    print(f"Mean confidence: {confidences.mean():.3f}")
     
-    return predictions.cpu().numpy(), confidences.cpu().numpy()
+    return predictions, confidences
 
 
 def run_experiment_3_fully_supervised(
