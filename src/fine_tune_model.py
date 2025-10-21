@@ -302,17 +302,32 @@ class HateSpeechFineTuner:
         
         # Train the model
         print("\nStarting training...")
-        self.model.fit(
-            train_objectives=[(train_dataloader, train_loss)],
-            evaluator=evaluator,
-            epochs=epochs,
-            warmup_steps=warmup_steps,
-            evaluation_steps=evaluation_steps,
-            output_path=str(output_dir),
-            save_best_model=save_best_model,
-            show_progress_bar=True,
-            optimizer_params={'lr': learning_rate}
-        )
+        
+        # Adjust parameters based on whether evaluator is available
+        if evaluator is None:
+            # No evaluator, disable evaluation
+            self.model.fit(
+                train_objectives=[(train_dataloader, train_loss)],
+                epochs=epochs,
+                warmup_steps=warmup_steps,
+                output_path=str(output_dir),
+                show_progress_bar=True,
+                optimizer_params={'lr': learning_rate},
+                checkpoint_save_steps=0  # Disable checkpoints during training
+            )
+        else:
+            # With evaluator
+            self.model.fit(
+                train_objectives=[(train_dataloader, train_loss)],
+                evaluator=evaluator,
+                epochs=epochs,
+                warmup_steps=warmup_steps,
+                evaluation_steps=evaluation_steps,
+                output_path=str(output_dir),
+                save_best_model=save_best_model,
+                show_progress_bar=True,
+                optimizer_params={'lr': learning_rate}
+            )
         
         print(f"\n✓ Fine-tuning complete! Model saved to: {output_dir}")
         
