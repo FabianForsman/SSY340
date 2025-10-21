@@ -196,18 +196,32 @@ def run_experiment_2_semi_supervised_model_based(
         confidence_threshold=confidence_threshold
     )
     
-    # Filter high-confidence predictions
-    high_conf_mask = np.array(confidences) >= confidence_threshold
-    pseudo_labeled_df = train_df_unlabeled.copy()
-    pseudo_labeled_df['label'] = pseudo_labels
-    pseudo_labeled_df = pseudo_labeled_df[high_conf_mask].reset_index(drop=True)
+    # Check if pseudo-labeling was successful
+    if len(pseudo_labels) == 0 or len(confidences) == 0:
+        print("Warning: Pseudo-labeling failed. No labels generated.")
+        print("Continuing with only labeled data (equivalent to Experiment 1).")
+        pseudo_labeled_df = pd.DataFrame()
+    else:
+        # Filter high-confidence predictions
+        high_conf_mask = np.array(confidences) >= confidence_threshold
+        pseudo_labeled_df = train_df_unlabeled.copy()
+        pseudo_labeled_df['label'] = pseudo_labels
+        pseudo_labeled_df = pseudo_labeled_df[high_conf_mask].reset_index(drop=True)
     
     print(f"High-confidence pseudo-labels: {len(pseudo_labeled_df)} / {len(train_df_unlabeled)}")
-    print(f"Average confidence: {np.mean(confidences[high_conf_mask]):.4f}")
-    print(f"Pseudo-label distribution:")
-    for label in sorted(pseudo_labeled_df['label'].unique()):
-        count = (pseudo_labeled_df['label'] == label).sum()
-        print(f"  {label}: {count} samples")
+    
+    if len(pseudo_labeled_df) > 0:
+        # Calculate stats only if we have pseudo-labels
+        high_conf_mask = np.array(confidences) >= confidence_threshold
+        if high_conf_mask.sum() > 0:
+            print(f"Average confidence: {np.mean(confidences[high_conf_mask]):.4f}")
+        print(f"Pseudo-label distribution:")
+        for label in sorted(pseudo_labeled_df['label'].unique()):
+            count = (pseudo_labeled_df['label'] == label).sum()
+            print(f"  {label}: {count} samples")
+    else:
+        print(f"Average confidence: N/A")
+        print(f"Pseudo-label distribution: None")
     
     # Step 3: Combine labeled + pseudo-labeled data
     combined_train_df = pd.concat([train_df_labeled, pseudo_labeled_df], ignore_index=True)
