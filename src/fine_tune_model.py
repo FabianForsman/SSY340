@@ -196,13 +196,15 @@ class HateSpeechFineTuner:
         print("\nPreparing training data...")
         
         # Create InputExample objects for classification
+        # Note: SoftmaxLoss in sentence-transformers 5.x expects pairs of texts
+        # For single-sentence classification, we duplicate the text
         train_examples = [
-            InputExample(texts=[row['text']], label=int(row['label']))
+            InputExample(texts=[row['text'], row['text']], label=int(row['label']))
             for _, row in train_df.iterrows()
         ]
         
         val_examples = [
-            InputExample(texts=[row['text']], label=int(row['label']))
+            InputExample(texts=[row['text'], row['text']], label=int(row['label']))
             for _, row in val_df.iterrows()
         ]
         
@@ -272,6 +274,8 @@ class HateSpeechFineTuner:
         )
         
         # Define loss function - Softmax loss for classification
+        # Note: In sentence-transformers 5.x, SoftmaxLoss expects pairs of sentences
+        # For single-sentence classification, we duplicate the sentence
         train_loss = losses.SoftmaxLoss(
             model=self.model,
             sentence_embedding_dimension=self.model.get_sentence_embedding_dimension(),
