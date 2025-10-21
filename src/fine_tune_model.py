@@ -414,34 +414,45 @@ class HateSpeechFineTuner:
         # Or use a simple k-NN classifier on embeddings
         from sklearn.neighbors import KNeighborsClassifier
         from sklearn.preprocessing import StandardScaler
+        from sklearn.metrics import accuracy_score, classification_report
+        import numpy as np
         
-        # Note: This is a simple evaluation. For production, you'd want to
-        # extract predictions from the softmax layer directly
+        # Use k-NN on the embeddings to evaluate
+        # This is simpler than dealing with the API changes in LabelAccuracyEvaluator
         print("\nTraining k-NN classifier on embeddings...")
         
-        # We need some labeled data for k-NN, so we'll use cross-validation
-        # or load the training embeddings. For now, simple accuracy on embeddings
-        
-        # Use the model's built-in evaluator if available
         sentences = test_df['text'].tolist()
-        labels = test_df['label'].tolist()
+        labels = test_df['label'].values
         
-        evaluator = evaluation.LabelAccuracyEvaluator(
-            sentences=sentences,
-            labels=labels,
-            name="test_evaluation",
-            batch_size=batch_size
+        # We need training data for k-NN, so let's use a simple train/test split
+        # Or better: use the embeddings directly with the built-in classifier
+        # For now, let's use k-NN with k=5 as a proxy for accuracy
+        
+        # Split embeddings and labels
+        from sklearn.model_selection import train_test_split
+        
+        # Use 20% for k-NN training, 80% for testing
+        X_train, X_test, y_train, y_test = train_test_split(
+            embeddings, labels, test_size=0.8, random_state=42, stratify=labels
         )
         
-        accuracy = evaluator(model)
+        # Train k-NN classifier
+        knn = KNeighborsClassifier(n_neighbors=5)
+        knn.fit(X_train, y_train)
         
-        print(f"\nTest Accuracy: {accuracy:.4f}")
+        # Predict on test set
+        predictions = knn.predict(X_test)
+        accuracy = accuracy_score(y_test, predictions)
         
-        # For more detailed metrics, we'd need to get predictions
-        # This is a simplified evaluation
+        print(f"\nTest Accuracy (k-NN on embeddings): {accuracy:.4f}")
+        print("\nClassification Report:")
+        print(classification_report(y_test, predictions, 
+                                   target_names=['hate_speech', 'offensive_language', 'neither']))
+        
         metrics = {
             'accuracy': accuracy,
-            'test_samples': len(test_df)
+            'test_samples': len(y_test),
+            'knn_k': 5
         }
         
         print("="*70)
