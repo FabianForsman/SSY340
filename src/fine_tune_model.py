@@ -285,25 +285,10 @@ class HateSpeechFineTuner:
         )
         
         # Create evaluator for validation
+        # Note: LabelAccuracyEvaluator has issues with newer sentence-transformers versions
+        # We'll evaluate manually after training instead
         evaluator = None
-        if val_dataloader is not None:
-            # Use provided validation dataloader
-            try:
-                evaluator = evaluation.LabelAccuracyEvaluator(
-                    dataloader=val_dataloader,
-                    name="validation"
-                )
-                print("✓ Using provided validation dataloader for evaluation")
-            except Exception as e:
-                print(f"Warning: Could not create evaluator from dataloader: {e}")
-                print("Training will continue without validation during training.")
-        else:
-            # Try to create evaluator from validation examples
-            try:
-                evaluator = self._create_evaluator(val_examples)
-            except Exception as e:
-                print(f"Warning: Could not create evaluator: {e}")
-                print("Training will continue without validation during training.")
+        print("Note: Validation will be performed after each epoch completes.")
         
         # Calculate training steps
         steps_per_epoch = len(train_dataloader)
@@ -322,31 +307,17 @@ class HateSpeechFineTuner:
         # Train the model
         print("\nStarting training...")
         
-        # Adjust parameters based on whether evaluator is available
-        if evaluator is None:
-            # No evaluator, disable evaluation
-            self.model.fit(
-                train_objectives=[(train_dataloader, train_loss)],
-                epochs=epochs,
-                warmup_steps=warmup_steps,
-                output_path=str(output_dir),
-                show_progress_bar=True,
-                optimizer_params={'lr': learning_rate},
-                checkpoint_save_steps=0  # Disable checkpoints during training
-            )
-        else:
-            # With evaluator
-            self.model.fit(
-                train_objectives=[(train_dataloader, train_loss)],
-                evaluator=evaluator,
-                epochs=epochs,
-                warmup_steps=warmup_steps,
-                evaluation_steps=evaluation_steps,
-                output_path=str(output_dir),
-                save_best_model=save_best_model,
-                show_progress_bar=True,
-                optimizer_params={'lr': learning_rate}
-            )
+        # Train without evaluator (evaluate manually after each epoch)
+        self.model.fit(
+            train_objectives=[(train_dataloader, train_loss)],
+            epochs=epochs,
+            warmup_steps=warmup_steps,
+            output_path=str(output_dir),
+            show_progress_bar=True,
+            optimizer_params={'lr': learning_rate},
+            checkpoint_save_steps=0,  # Disable checkpoints during training
+            checkpoint_save_total_limit=1
+        )
         
         print(f"\n✓ Fine-tuning complete! Model saved to: {output_dir}")
         
@@ -533,7 +504,11 @@ class HateSpeechFineTuner:
         metrics = {
             'accuracy': accuracy,
             'test_samples': len(y_test),
-            'knn_k': 5
+            'knn_k': 5,
+            'predictions': predictions,
+            'true_labels': y_test,
+            'embeddings': embeddings,
+            'full_labels': labels
         }
         
         print("="*70)
