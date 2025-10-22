@@ -1,2 +1,0 @@
-iteration,n_labeled,n_pseudo_labeled,n_unlabeled,avg_confidence,silhouette_score,cluster_purity
-1,39796,11588,502,0.7644374905823427,0.03595490753650665,0.3430941576857629
