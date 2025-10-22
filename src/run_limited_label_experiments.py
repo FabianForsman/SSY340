@@ -10,21 +10,192 @@ This script compares different approaches:
 Goal: Show that we can achieve good results with very limited labeled data.
 """
 
+import os
+# Suppress tokenizers parallelism warning
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 import argparse
 import yaml
 from pathlib import Path
 import pandas as pd
 import numpy as np
+from typing import Tuple
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, classification_report
 import torch
+from tqdm import tqdm
 
-from src.fine_tune_model import HateSpeechFineTuner
+from fine_tune_model import HateSpeechFineTuner
 from sentence_transformers import SentenceTransformer
+from data_loader import HateSpeechDataset, create_dataloaders
+from preprocessing import create_transform
+from data_augmentation import data_agumentation, augment_data_to_target_count
+
+
+def load_config(config_path="config.yaml"):
+    """Load configuration from YAML file."""
+    with open(config_path, "r") as f:
+        config = yaml.safe_load(f)
+    return config
+
+
+def prepare_augmented_dataset(data_path: str, config: dict):
+    """
+    Load, preprocess, augment, and balance the dataset.
+    This creates the full augmented dataset that all experiments will use.
+    
+    Args:
+        data_path: Path to labeled data CSV
+        config: Configuration dictionary
+        
+    Returns:
+        HateSpeechDataset: Fully prepared dataset with augmentation and balancing
+    """
+    print("\n" + "="*80)
+    print("PREPARING AUGMENTED DATASET (SHARED BY ALL EXPERIMENTS)")
+    print("="*80)
+    
+    # Step 1: Load raw dataset
+    print("\n--- Step 1: Loading raw data ---")
+    dataset_raw = HateSpeechDataset(
+        root=str(Path(data_path).parent),
+        file=Path(data_path).name,
+        text_column=config["data"]["text_column"],
+        label_column=config["data"]["label_column"],
+        transform=None
+    )
+    print(f"Loaded {len(dataset_raw)} samples")
+    
+    # Step 2: Apply preprocessing
+    print("\n--- Step 2: Applying preprocessing ---")
+    text_transform = create_transform(**config["preprocessing"])
+    dataset_raw.transform = text_transform
+    print("Preprocessing applied")
+    
+    # Step 3: Apply data augmentation
+    print("\n--- Step 3: Applying data augmentation ---")
+    methods = config.get("data_augmentation", {}).get("methods", {})
+    
+    if methods.get("synonym_replacement", {}).get("enabled", False):
+        num_replacements = methods.get("synonym_replacement", {}).get("n", 1)
+        print(f"Applying synonym replacement (n={num_replacements})")
+        
+        hate_speech_data = dataset_raw.df[dataset_raw.df['label'] == 0].copy()
+        augmented_texts = []
+        
+        for idx, row in tqdm(hate_speech_data.iterrows(), 
+                            total=len(hate_speech_data), 
+                            desc="Augmenting hate speech samples"):
+            text = row[dataset_raw.text_column]
+            label = row[dataset_raw.label_column]
+            label_desc = row.get('label_desc', None)
+            
+            augmented_versions = data_agumentation(text, num_replacements)
+            for aug_text in augmented_versions:
+                augmented_texts.append((aug_text, label, label_desc))
+        
+        if augmented_texts:
+            df_augmented = pd.DataFrame(
+                augmented_texts, 
+                columns=[dataset_raw.text_column, dataset_raw.label_column, 'label_desc']
+            )
+            print(f"Generated {len(df_augmented)} augmented samples")
+            df_combined = pd.concat([dataset_raw.df, df_augmented], ignore_index=True)
+            dataset_raw.update_dataframe(df_combined)
+    
+    # Step 4: Balance dataset
+    print("\n--- Step 4: Balancing dataset ---")
+    class_counts = dataset_raw.df['label'].value_counts()
+    print(f"Class distribution before balancing:\n{class_counts}")
+    
+    max_count = class_counts.max()
+    balanced_dfs = []
+    for label, count in class_counts.items():
+        df_class = dataset_raw.df[dataset_raw.df['label'] == label]
+        df_balanced = augment_data_to_target_count(df_class, max_count)
+        balanced_dfs.append(df_balanced)
+    
+    df_balanced = pd.concat(balanced_dfs, ignore_index=True)
+    print(f"Class distribution after balancing:\n{df_balanced['label'].value_counts()}")
+    dataset_raw.update_dataframe(df_balanced)
+    
+    # Step 5: Shuffle
+    print("\n--- Step 5: Shuffling dataset ---")
+    dataset_raw.df = dataset_raw.df.sample(frac=1, random_state=42).reset_index(drop=True)
+    dataset_raw.update_dataframe(dataset_raw.df)
+    
+    print(f"\n✓ Final dataset prepared: {len(dataset_raw)} samples")
+    return dataset_raw
+
+
+def create_train_test_splits(
+    dataset: HateSpeechDataset,
+    config: dict,
+    output_dir: str = "outputs/experiments"
+) -> Tuple:
+    """
+    Create train/val/test splits once and return dataloaders.
+    All experiments will use these same dataloaders.
+    
+    Args:
+        dataset: Prepared dataset
+        config: Configuration dictionary
+        output_dir: Directory to save split CSVs (for reference)
+        
+    Returns:
+        train_loader, val_loader, test_loader
+    """
+    print("\n" + "="*80)
+    print("CREATING TRAIN/VAL/TEST SPLITS (SHARED BY ALL EXPERIMENTS)")
+    print("="*80)
+    
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    
+    print("\n--- Creating dataloaders with fixed random seed ---")
+    
+    # Create dataloaders using existing function
+    # The split is deterministic due to random_state=42 in train_dev_test_split
+    train_loader, val_loader, test_loader = create_dataloaders(
+        dataset,
+        batch_size=config["embedding"]["batch_size"],
+        shuffle=False,  # Don't shuffle to ensure reproducibility across experiments
+        num_workers=4
+    )
+    
+    # Save splits to CSV for reference
+    train_path = output_path / "train_split.csv"
+    val_path = output_path / "val_split.csv"
+    test_path = output_path / "test_split.csv"
+    
+    train_df = _loader_to_dataframe(train_loader, config)
+    val_df = _loader_to_dataframe(val_loader, config)
+    test_df = _loader_to_dataframe(test_loader, config)
+    
+    train_df.to_csv(train_path, index=False)
+    val_df.to_csv(val_path, index=False)
+    test_df.to_csv(test_path, index=False)
+    
+    print(f"Train samples: {len(train_df)}, Val samples: {len(val_df)}, Test samples: {len(test_df)}")
+    print(f"\nTrain class distribution:")
+    print(train_df['label'].value_counts().sort_index())
+    print(f"\nVal class distribution:")
+    print(val_df['label'].value_counts().sort_index())
+    print(f"\nTest class distribution:")
+    print(test_df['label'].value_counts().sort_index())
+    
+    print(f"\n✓ Splits saved to:")
+    print(f"  - {train_path}")
+    print(f"  - {val_path}")
+    print(f"  - {test_path}")
+    
+    return train_loader, val_loader, test_loader
 
 
 def run_experiment_1_supervised_limited(
-    data_path: str,
+    train_loader,
+    val_loader,
+    test_loader,
     label_fraction: float = 0.1,
     output_dir: str = "outputs/experiments",
     config_path: str = "config.yaml"
@@ -35,7 +206,9 @@ def run_experiment_1_supervised_limited(
     Train a classifier using only a small fraction of labeled data.
     
     Args:
-        data_path: Path to labeled data CSV
+        train_loader: Training data loader (shared across experiments)
+        val_loader: Validation data loader (shared across experiments)
+        test_loader: Test data loader (shared across experiments)
         label_fraction: Fraction of training data to use (e.g., 0.1 = 10%)
         output_dir: Directory to save results
         config_path: Path to config file
@@ -46,21 +219,15 @@ def run_experiment_1_supervised_limited(
     print(f"Using only {label_fraction*100:.0f}% of training labels")
     print("="*80)
     
-    # Initialize fine-tuner
-    fine_tuner = HateSpeechFineTuner(
-        base_model="all-MiniLM-L6-v2",
-        num_classes=3,
-        config_path=config_path
-    )
+    # Load config
+    config = load_config(config_path)
     
-    # Load full dataset
-    train_df, val_df, test_df = fine_tuner.load_and_preprocess_data(
-        data_path=data_path,
-        test_size=0.2,
-        val_size=0.1,
-        apply_preprocessing=True,
-        balance_classes=True
-    )
+    # Convert loaders to DataFrames (only for fine-tuner compatibility)
+    train_df = _loader_to_dataframe(train_loader, config)
+    val_df = _loader_to_dataframe(val_loader, config)
+    test_df = _loader_to_dataframe(test_loader, config)
+    
+    print(f"\nTrain samples: {len(train_df)}, Val samples: {len(val_df)}, Test samples: {len(test_df)}")
     
     # Sample only label_fraction of training data
     train_df_limited, _ = train_test_split(
@@ -76,6 +243,13 @@ def run_experiment_1_supervised_limited(
         count = (train_df_limited['label'] == label).sum()
         print(f"  {label}: {count} samples")
     
+    # Initialize fine-tuner
+    fine_tuner = HateSpeechFineTuner(
+        base_model="all-MiniLM-L6-v2",
+        num_classes=3,
+        config_path=config_path
+    )
+    
     # Prepare training data
     train_examples, val_examples = fine_tuner.prepare_training_data(
         train_df_limited, val_df
@@ -89,8 +263,8 @@ def run_experiment_1_supervised_limited(
         train_examples=train_examples,
         val_examples=val_examples,
         output_path=str(model_output),
-        epochs=6,
-        batch_size=32,
+        epochs=2,
+        batch_size=64,
         learning_rate=2e-5
     )
     
@@ -111,13 +285,43 @@ def run_experiment_1_supervised_limited(
     results_df.to_csv(results_path, index=False)
     print(f"\n✓ Results saved to: {results_path}")
     
+    # Copy model to models/ directory for easy access
+    models_dir = Path("models")
+    models_dir.mkdir(parents=True, exist_ok=True)
+    final_model_path = models_dir / "exp1_supervised_limited"
+    
+    # Save model directly
+    fine_tuner.model.save(str(final_model_path))
+    print(f"✓ Model saved to: {final_model_path}")
+    
     return metrics, model_output
 
 
+def _loader_to_dataframe(loader, config):
+    """Convert DataLoader to DataFrame for compatibility with fine-tuner.
+    
+    Note: The fine-tuner expects columns named 'text' and 'label',
+    so we standardize the column names here.
+    """
+    texts = []
+    labels = []
+    for batch in loader:
+        batch_texts, batch_labels = batch
+        texts.extend(batch_texts)
+        labels.extend([label.item() if torch.is_tensor(label) else label for label in batch_labels])
+    
+    return pd.DataFrame({
+        'text': texts,  # Standardize column name for fine-tuner
+        'label': labels
+    })
+
+
 def run_experiment_2_semi_supervised_model_based(
-    data_path: str,
+    train_loader,
+    val_loader,
+    test_loader,
     label_fraction: float = 0.1,
-    confidence_threshold: float = 0.8,
+    confidence_threshold: float = 0.6,
     output_dir: str = "outputs/experiments",
     config_path: str = "config.yaml",
     k_neighbors: int = 5
@@ -131,11 +335,14 @@ def run_experiment_2_semi_supervised_model_based(
     4. Retrain on labeled + pseudo-labeled data
     
     Args:
-        data_path: Path to labeled data CSV
+        train_loader: Training data loader (shared across experiments)
+        val_loader: Validation data loader (shared across experiments)
+        test_loader: Test data loader (shared across experiments)
         label_fraction: Fraction of training data to use as labeled
         confidence_threshold: Confidence threshold for pseudo-labels (0-1)
         output_dir: Directory to save results
         config_path: Path to config file
+        k_neighbors: Number of neighbors for k-NN pseudo-labeling
     """
     print("\n" + "="*80)
     print("EXPERIMENT 2: SEMI-SUPERVISED WITH MODEL-BASED PSEUDO-LABELING")
@@ -144,21 +351,15 @@ def run_experiment_2_semi_supervised_model_based(
     print(f"Confidence threshold: {confidence_threshold}")
     print("="*80)
     
-    # Initialize fine-tuner
-    fine_tuner = HateSpeechFineTuner(
-        base_model="all-MiniLM-L6-v2",
-        num_classes=3,
-        config_path=config_path
-    )
+    # Load config
+    config = load_config(config_path)
     
-    # Load full dataset
-    train_df, val_df, test_df = fine_tuner.load_and_preprocess_data(
-        data_path=data_path,
-        test_size=0.2,
-        val_size=0.1,
-        apply_preprocessing=True,
-        balance_classes=True
-    )
+    # Convert loaders to DataFrames (only for fine-tuner compatibility)
+    train_df = _loader_to_dataframe(train_loader, config)
+    val_df = _loader_to_dataframe(val_loader, config)
+    test_df = _loader_to_dataframe(test_loader, config)
+    
+    print(f"\nTrain samples: {len(train_df)}, Val samples: {len(val_df)}, Test samples: {len(test_df)}")
     
     # Split into labeled and unlabeled
     train_df_labeled, train_df_unlabeled = train_test_split(
@@ -170,6 +371,13 @@ def run_experiment_2_semi_supervised_model_based(
     
     print(f"\nLabeled samples: {len(train_df_labeled)}")
     print(f"Unlabeled samples: {len(train_df_unlabeled)}")
+    
+    # Initialize fine-tuner
+    fine_tuner = HateSpeechFineTuner(
+        base_model="all-MiniLM-L6-v2",
+        num_classes=3,
+        config_path=config_path
+    )
     
     # Step 1: Train initial model on labeled data
     print("\n--- Step 1: Training initial model on labeled data ---")
@@ -184,8 +392,8 @@ def run_experiment_2_semi_supervised_model_based(
         train_examples=train_examples,
         val_examples=val_examples,
         output_path=str(initial_model_path),
-        epochs=6,
-        batch_size=32,
+        epochs=2,
+        batch_size=64,
         learning_rate=2e-5
     )
     
@@ -193,8 +401,8 @@ def run_experiment_2_semi_supervised_model_based(
     print("\n--- Step 2: Generating pseudo-labels ---")
     pseudo_labels, confidences = generate_pseudo_labels_with_model(
         model=fine_tuner.model,
-        texts=train_df_unlabeled['text'].tolist(),
-        labeled_texts=train_df_labeled['text'].tolist(),
+        texts=train_df_unlabeled[config["data"]["text_column"]].tolist(),
+        labeled_texts=train_df_labeled[config["data"]["text_column"]].tolist(),
         labeled_labels=train_df_labeled['label'].values,
         confidence_threshold=confidence_threshold,
         k_neighbors=k_neighbors
@@ -245,8 +453,8 @@ def run_experiment_2_semi_supervised_model_based(
         train_examples=combined_train_examples,
         val_examples=val_examples,
         output_path=str(final_model_path),
-        epochs=6,
-        batch_size=32,
+        epochs=2,
+        batch_size=64,
         learning_rate=2e-5
     )
     
@@ -270,6 +478,15 @@ def run_experiment_2_semi_supervised_model_based(
     results_df.to_csv(results_path, index=False)
     print(f"\n✓ Results saved to: {results_path}")
     
+    # Copy model to models/ directory for easy access
+    models_dir = Path("models")
+    models_dir.mkdir(parents=True, exist_ok=True)
+    final_model_save_path = models_dir / "exp2_semi_supervised_model_based"
+    
+    # Save model directly
+    fine_tuner.model.save(str(final_model_save_path))
+    print(f"✓ Model saved to: {final_model_save_path}")
+    
     return metrics, final_model_path
 
 
@@ -278,7 +495,7 @@ def generate_pseudo_labels_with_model(
     texts: list,
     labeled_texts: list,
     labeled_labels: np.ndarray,
-    confidence_threshold: float = 0.8,
+    confidence_threshold: float = 0.6,
     k_neighbors: int = 5
 ) -> tuple:
     """
@@ -341,7 +558,9 @@ def generate_pseudo_labels_with_model(
 
 
 def run_experiment_3_fully_supervised(
-    data_path: str,
+    train_loader,
+    val_loader,
+    test_loader,
     output_dir: str = "outputs/experiments",
     config_path: str = "config.yaml"
 ):
@@ -349,6 +568,13 @@ def run_experiment_3_fully_supervised(
     Experiment 3: Fully supervised learning (upper bound).
     
     Train on 100% of labeled data.
+    
+    Args:
+        train_loader: Training data loader (shared across experiments)
+        val_loader: Validation data loader (shared across experiments)
+        test_loader: Test data loader (shared across experiments)
+        output_dir: Directory to save results
+        config_path: Path to config file
     """
     print("\n" + "="*80)
     print("EXPERIMENT 3: FULLY SUPERVISED (UPPER BOUND)")
@@ -356,23 +582,22 @@ def run_experiment_3_fully_supervised(
     print("Using 100% of training labels")
     print("="*80)
     
+    # Load config
+    config = load_config(config_path)
+    
+    # Convert loaders to DataFrames (only for fine-tuner compatibility)
+    train_df = _loader_to_dataframe(train_loader, config)
+    val_df = _loader_to_dataframe(val_loader, config)
+    test_df = _loader_to_dataframe(test_loader, config)
+    
+    print(f"\nUsing all {len(train_df)} training samples")
+    
     # Initialize fine-tuner
     fine_tuner = HateSpeechFineTuner(
         base_model="all-MiniLM-L6-v2",
         num_classes=3,
         config_path=config_path
     )
-    
-    # Load full dataset
-    train_df, val_df, test_df = fine_tuner.load_and_preprocess_data(
-        data_path=data_path,
-        test_size=0.2,
-        val_size=0.1,
-        apply_preprocessing=True,
-        balance_classes=True
-    )
-    
-    print(f"\nUsing all {len(train_df)} training samples")
     
     # Prepare training data
     train_examples, val_examples = fine_tuner.prepare_training_data(
@@ -387,8 +612,8 @@ def run_experiment_3_fully_supervised(
         train_examples=train_examples,
         val_examples=val_examples,
         output_path=str(model_output),
-        epochs=6,
-        batch_size=32,
+        epochs=2,
+        batch_size=64,
         learning_rate=2e-5
     )
     
@@ -409,7 +634,17 @@ def run_experiment_3_fully_supervised(
     results_df.to_csv(results_path, index=False)
     print(f"\n✓ Results saved to: {results_path}")
     
+    # Copy model to models/ directory for easy access
+    models_dir = Path("models")
+    models_dir.mkdir(parents=True, exist_ok=True)
+    final_model_save_path = models_dir / "exp3_fully_supervised"
+    
+    # Save model directly
+    fine_tuner.model.save(str(final_model_save_path))
+    print(f"✓ Model saved to: {final_model_save_path}")
+
     return metrics, model_output
+
 
 
 def generate_comparison_report(output_dir: str):
@@ -498,7 +733,7 @@ def main():
     parser.add_argument(
         '--confidence-threshold',
         type=float,
-        default=0.8,
+        default=0.6,
         help='Confidence threshold for pseudo-labeling'
     )
     
@@ -519,25 +754,42 @@ def main():
     
     args = parser.parse_args()
     
+    # Load config
+    config = load_config(args.config)
+    
     # Create output directory
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
+    
+    # Prepare augmented dataset (shared by all experiments)
+    dataset = prepare_augmented_dataset(args.data, config)
+    
+    # Create train/val/test splits ONCE (shared by all experiments)
+    train_loader, val_loader, test_loader = create_train_test_splits(
+        dataset=dataset,
+        config=config,
+        output_dir=args.output_dir
+    )
     
     run_experiments = args.experiments
     if 'all' in run_experiments:
         run_experiments = ['exp1', 'exp2', 'exp3']
     
-    # Run experiments
+    # Run experiments (all using the SAME dataloaders/test set)
     if 'exp1' in run_experiments:
-        run_experiment_1_supervised_limited(
-            data_path=args.data,
+        model1 = run_experiment_1_supervised_limited(
+            train_loader=train_loader,
+            val_loader=val_loader,
+            test_loader=test_loader,
             label_fraction=args.label_fraction,
             output_dir=args.output_dir,
             config_path=args.config
         )
     
     if 'exp2' in run_experiments:
-        run_experiment_2_semi_supervised_model_based(
-            data_path=args.data,
+        model2 = run_experiment_2_semi_supervised_model_based(
+            train_loader=train_loader,
+            val_loader=val_loader,
+            test_loader=test_loader,
             label_fraction=args.label_fraction,
             confidence_threshold=args.confidence_threshold,
             output_dir=args.output_dir,
@@ -546,8 +798,10 @@ def main():
         )
     
     if 'exp3' in run_experiments:
-        run_experiment_3_fully_supervised(
-            data_path=args.data,
+        model3 = run_experiment_3_fully_supervised(
+            train_loader=train_loader,
+            val_loader=val_loader,
+            test_loader=test_loader,
             output_dir=args.output_dir,
             config_path=args.config
         )

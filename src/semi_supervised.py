@@ -32,7 +32,7 @@ class SelfTrainingClassifier:
         self,
         clustering_method='kmeans',
         n_clusters=3,
-        confidence_threshold=0.8,
+        confidence_threshold=0.6,
         max_iterations=5,
         min_samples_per_iteration=10,
         use_silhouette_for_confidence=True,
@@ -57,6 +57,7 @@ class SelfTrainingClassifier:
         self.min_samples_per_iteration = min_samples_per_iteration
         self.use_silhouette_for_confidence = use_silhouette_for_confidence
         self.random_state = random_state
+        self.threshold_decay = 0.95 # Decay factor for confidence threshold per iteration
         
         # Initialize clustering model
         if clustering_method == 'kmeans':
@@ -161,7 +162,8 @@ class SelfTrainingClassifier:
             unlabeled_indices = np.where(~current_labeled_mask)[0]
             # Get confidences only for unlabeled samples
             unlabeled_confidences = confidences[unlabeled_indices]
-            high_confidence_mask = unlabeled_confidences > self.confidence_threshold
+            dynamic_threshold = self.confidence_threshold * (self.threshold_decay ** iteration)
+            high_confidence_mask = unlabeled_confidences > dynamic_threshold
             pseudo_labeled_indices = unlabeled_indices[high_confidence_mask]
             
             n_pseudo_labeled = len(pseudo_labeled_indices)

@@ -236,7 +236,8 @@ class HateSpeechFineTuner:
         learning_rate: float = 2e-5,
         warmup_steps: int = 100,
         evaluation_steps: int = 500,
-        save_best_model: bool = True
+        save_best_model: bool = True,
+        val_dataloader = None
     ):
         """
         Fine-tune the model.
@@ -251,6 +252,7 @@ class HateSpeechFineTuner:
             warmup_steps: Number of warmup steps
             evaluation_steps: Evaluate every N steps
             save_best_model: Save model with best validation score
+            val_dataloader: Optional pre-created validation DataLoader (if None, will create from val_examples)
         """
         if self.model is None:
             raise ValueError("Model not initialized. Call create_model_with_classifier() first.")
@@ -282,13 +284,26 @@ class HateSpeechFineTuner:
             num_labels=self.num_classes
         )
         
-        # Create evaluator for validation (optional, set to None if API issues)
-        try:
-            evaluator = self._create_evaluator(val_examples)
-        except (TypeError, AttributeError) as e:
-            print(f"Warning: Could not create evaluator: {e}")
-            print("Training will continue without validation during training.")
-            evaluator = None
+        # Create evaluator for validation
+        evaluator = None
+        if val_dataloader is not None:
+            # Use provided validation dataloader
+            try:
+                evaluator = evaluation.LabelAccuracyEvaluator(
+                    dataloader=val_dataloader,
+                    name="validation"
+                )
+                print("✓ Using provided validation dataloader for evaluation")
+            except Exception as e:
+                print(f"Warning: Could not create evaluator from dataloader: {e}")
+                print("Training will continue without validation during training.")
+        else:
+            # Try to create evaluator from validation examples
+            try:
+                evaluator = self._create_evaluator(val_examples)
+            except Exception as e:
+                print(f"Warning: Could not create evaluator: {e}")
+                print("Training will continue without validation during training.")
         
         # Calculate training steps
         steps_per_epoch = len(train_dataloader)
@@ -335,6 +350,11 @@ class HateSpeechFineTuner:
         
         print(f"\n✓ Fine-tuning complete! Model saved to: {output_dir}")
         
+        # Evaluate on validation set after training
+        print("\nEvaluating on validation set...")
+        val_metrics = self._evaluate_on_validation(val_examples)
+        print(f"Validation Accuracy: {val_metrics['accuracy']:.4f}")
+        
         # Save training info
         info = {
             'base_model': self.base_model_name,
@@ -345,6 +365,7 @@ class HateSpeechFineTuner:
             'epochs': epochs,
             'batch_size': batch_size,
             'learning_rate': learning_rate,
+            'validation_accuracy': val_metrics['accuracy'],
             'timestamp': datetime.now().isoformat()
         }
         
@@ -353,22 +374,82 @@ class HateSpeechFineTuner:
             yaml.dump(info, f, default_flow_style=False)
         print(f"Training info saved to: {info_path}")
         
-    def _create_evaluator(self, val_examples: List[InputExample]):
-        """Create evaluator for validation during training."""
-        # Prepare validation data
-        sentences = [example.texts[0] for example in val_examples]
-        labels = [example.label for example in val_examples]
+        return val_metrics
         
-        # Use LabelAccuracyEvaluator for classification
-        # Updated API for sentence-transformers 3.0+
-        evaluator = evaluation.LabelAccuracyEvaluator(
-            sentences=sentences,
-            labels=labels,
-            batch_size=32,
-            name="validation"
+    def _create_evaluator(self, val_examples: List[InputExample]):
+        """Create evaluator for validation during training.
+        
+        LabelAccuracyEvaluator expects a DataLoader with InputExamples.
+        """
+        try:
+            # Create a DataLoader directly from the validation examples
+            # The DataLoader will yield InputExample objects
+            val_dataloader = DataLoader(
+                val_examples,
+                batch_size=32,
+                shuffle=False
+            )
+            
+            # Create the evaluator with the DataLoader
+            evaluator = evaluation.LabelAccuracyEvaluator(
+                dataloader=val_dataloader,
+                name="validation"
+            )
+            
+            return evaluator
+        except Exception as e:
+            import traceback
+            print(f"Warning: Could not create evaluator: {e}")
+            print(f"Error type: {type(e).__name__}")
+            traceback.print_exc()
+            print("Training will continue without validation during training.")
+            return None
+    
+    def _evaluate_on_validation(self, val_examples: List[InputExample], batch_size: int = 32) -> Dict[str, float]:
+        """
+        Evaluate model on validation set after training.
+        
+        Args:
+            val_examples: Validation examples
+            batch_size: Batch size for inference
+            
+        Returns:
+            Dictionary with validation metrics
+        """
+        from sklearn.neighbors import KNeighborsClassifier
+        from sklearn.model_selection import train_test_split
+        
+        sentences = [example.texts[0] for example in val_examples]
+        labels = np.array([example.label for example in val_examples])
+        
+        # Generate embeddings
+        embeddings = self.model.encode(
+            sentences,
+            batch_size=batch_size,
+            show_progress_bar=False,
+            convert_to_numpy=True
         )
         
-        return evaluator
+        # Use k-NN classifier to evaluate embeddings
+        # Split: 20% for k-NN training, 80% for evaluation
+        X_train, X_test, y_train, y_test = train_test_split(
+            embeddings, labels, test_size=0.8, random_state=42, stratify=labels
+        )
+        
+        knn = KNeighborsClassifier(n_neighbors=5)
+        knn.fit(X_train, y_train)
+        predictions = knn.predict(X_test)
+        
+        accuracy = accuracy_score(y_test, predictions)
+        f1_macro = f1_score(y_test, predictions, average='macro')
+        f1_weighted = f1_score(y_test, predictions, average='weighted')
+        
+        return {
+            'accuracy': accuracy,
+            'f1_macro': f1_macro,
+            'f1_weighted': f1_weighted,
+            'val_samples': len(y_test)
+        }
     
     def evaluate(
         self,
@@ -522,6 +603,9 @@ class HateSpeechFineTuner:
         k: int = 5
     ) -> Dict[str, float]:
         """Evaluate model using k-NN classifier on embeddings."""
+        from sklearn.neighbors import KNeighborsClassifier
+        from sklearn.model_selection import train_test_split
+        
         # Generate embeddings
         test_embeddings = model.encode(
             test_df['text'].tolist(),

@@ -468,7 +468,7 @@ def run_semi_supervised_pipeline(config, embeddings, all_labels, dataloaders):
 def main():
     """Main function."""
     parser = argparse.ArgumentParser(
-        description="Hate Speech Detection - Unsupervised Learning"
+        description="Hate Speech Detection - Semi-Supervised Learning"
     )
     parser.add_argument(
         "--config", type=str, default="config.yaml", help="Path to configuration file"
@@ -479,11 +479,11 @@ def main():
     # Load configuration
     config = load_config(args.config)
 
-    # Run main pipeline - returns embeddings, dataloaders, and labels from balanced dataset
+    # Run main pipeline
     embeddings, dataloaders, all_labels = run_pipeline(config)
     
-    # Run semi-supervised pipeline with the same dataloaders and embeddings
-    classifier, test_predictions, test_labels = run_semi_supervised_pipeline(
+    # Run semi-supervised pipeline with classifier
+    clustering_model, supervised_model, test_predictions, test_labels = run_semi_supervised_with_classifier(
         config,
         embeddings,
         all_labels,
@@ -491,23 +491,17 @@ def main():
     )
 
     print("\n" + "=" * 70)
-    print("RESULTS SUMMARY")
+    print("PIPELINE COMPLETE")
     print("=" * 70)
     
-    print(f"Embedding dimension: {embeddings.shape[1]}")
-    
-    if classifier is not None:
-        print(f"Semi-supervised training completed:")
-        print(f"  Iterations: {len(classifier.history['iteration'])}")
-        print(f"  Final labeled samples: {classifier.history['n_labeled'][-1] if classifier.history['n_labeled'] else 0}")
-        
-        if test_predictions is not None and test_labels is not None:
-            from evaluation import calculate_metrics
-            final_metrics = calculate_metrics(test_labels, test_predictions)
-            print(f"  Test accuracy: {final_metrics['accuracy']:.4f}")
-            print(f"  Test macro F1: {final_metrics['macro_f1']:.4f}")
+    if supervised_model is not None:
+        print("\nFinal model uses:")
+        print("  1. Clustering (DBSCAN/KMeans) for pseudo-labeling")
+        print("  2. Logistic Regression on embeddings for classification")
+        print(f"\nModel saved and ready for inference.")
     
     print("\n" + "=" * 70)
+
 
 
 if __name__ == "__main__":
