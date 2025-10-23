@@ -1,3 +1,5 @@
+# Visualizes the class distribution in the dataset
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from data_loader import HateSpeechDataset

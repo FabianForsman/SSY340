@@ -1,3 +1,4 @@
+# SHOULD BE USED FOR PREDICTION IN predict.py
 """
 Prediction module for hate speech detection models.
 
