@@ -28,7 +28,7 @@ data:
 
 # Text preprocessing settings
 preprocessing:
-  remove_stopwords: false 
+  remove_stopwords: true 
   lowercase: true
   remove_urls: true
   remove_mentions: true
