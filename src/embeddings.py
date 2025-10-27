@@ -1,5 +1,3 @@
-# SHOULD BE USED INSTEAD IN main.py
-
 """
 Embedding generation module for hate speech detection project.
 Generates sentence embeddings using various SBERT models.

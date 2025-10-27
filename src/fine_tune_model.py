@@ -1,9 +1,7 @@
 """
 Fine-tune SBERT model (all-MiniLM-L6-v2) on hate speech classification task.
 
-This script fine-tunes a pre-trained sentence transformer model using:
-1. Softmax Classification Loss (primary) - Direct classification training
-2. Optional: Contrastive Learning - Learn to group similar classes together
+Softmax Classification Loss (primary) - Direct classification training
 
 The fine-tuned model produces better embeddings for hate speech detection.
 """
@@ -196,7 +194,6 @@ class HateSpeechFineTuner:
         print("\nPreparing training data...")
         
         # Create InputExample objects for classification
-        # Note: SoftmaxLoss in sentence-transformers 5.x expects pairs of texts
         # For single-sentence classification, we duplicate the text
         train_examples = [
             InputExample(texts=[row['text'], row['text']], label=int(row['label']))
@@ -275,9 +272,6 @@ class HateSpeechFineTuner:
             batch_size=batch_size
         )
         
-        # Define loss function - Softmax loss for classification
-        # Note: In sentence-transformers 5.x, SoftmaxLoss expects pairs of sentences
-        # For single-sentence classification, we duplicate the sentence
         train_loss = losses.SoftmaxLoss(
             model=self.model,
             sentence_embedding_dimension=self.model.get_sentence_embedding_dimension(),
@@ -475,10 +469,7 @@ class HateSpeechFineTuner:
         
         sentences = test_df['text'].tolist()
         labels = test_df['label'].values
-        
-        # We need training data for k-NN, so let's use a simple train/test split
-        # Or better: use the embeddings directly with the built-in classifier
-        # For now, let's use k-NN with k=5 as a proxy for accuracy
+    
         
         # Split embeddings and labels
         from sklearn.model_selection import train_test_split
@@ -589,8 +580,6 @@ class HateSpeechFineTuner:
             convert_to_numpy=True
         )
         
-        # For proper evaluation, we need training data
-        # For now, use simple train-test split from test set
         from sklearn.model_selection import train_test_split
         
         X_train, X_test, y_train, y_test = train_test_split(
